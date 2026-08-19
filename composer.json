@@ -25,6 +25,7 @@
         "drupal/core-recommended": "^11.4",
         "drupal/crop": "^2.6",
         "drupal/easy_breadcrumb": "^2.0",
+        "drupal/entity": "^1.7",
         "drush/drush": "^13.7"
     },
     "conflict": {

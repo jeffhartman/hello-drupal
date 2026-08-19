@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8add47ab7bac9f69d8007ad820329dfb",
+    "content-hash": "f377815296a72fd51a9e09a9cfcc1c99",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2136,6 +2136,83 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/easy_breadcrumb",
                 "issues": "https://www.drupal.org/project/issues/easy_breadcrumb"
+            }
+        },
+        {
+            "name": "drupal/entity",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/entity.git",
+                "reference": "8.x-1.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "d9c24749beb5bfeb398f503b8a31a676483cd182"
+            },
+            "require": {
+                "drupal/core": "^10.1 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.7",
+                    "datestamp": "1786708365",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "dawehner",
+                    "homepage": "https://www.drupal.org/user/99340"
+                },
+                {
+                    "name": "dixon_",
+                    "homepage": "https://www.drupal.org/user/239911"
+                },
+                {
+                    "name": "fago",
+                    "homepage": "https://www.drupal.org/user/16747"
+                },
+                {
+                    "name": "klausi",
+                    "homepage": "https://www.drupal.org/user/262198"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "tr",
+                    "homepage": "https://www.drupal.org/user/202830"
+                },
+                {
+                    "name": "tstoeckler",
+                    "homepage": "https://www.drupal.org/user/107158"
+                }
+            ],
+            "description": "Provides expanded entity APIs, which will be moved to Drupal core one day.",
+            "homepage": "https://www.drupal.org/project/entity",
+            "support": {
+                "source": "https://git.drupalcode.org/project/entity",
+                "issues": "https://www.drupal.org/project/issues/entity"
             }
         },
         {
