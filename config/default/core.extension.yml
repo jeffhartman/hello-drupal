@@ -16,6 +16,7 @@ module:
   config_ignore: 0
   config_split: 0
   contextual: 0
+  crop: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
