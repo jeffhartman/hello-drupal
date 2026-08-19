@@ -24,6 +24,7 @@
         "drupal/core-recipe-unpack": "^11.4",
         "drupal/core-recommended": "^11.4",
         "drupal/crop": "^2.6",
+        "drupal/easy_breadcrumb": "^2.0",
         "drush/drush": "^13.7"
     },
     "conflict": {
