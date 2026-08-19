@@ -29,6 +29,7 @@
         "drupal/entity_browser": "^2.17",
         "drupal/field_group": "^4.0",
         "drupal/focal_point": "^2.1",
+        "drupal/fpa": "^4.0",
         "drush/drush": "^13.7"
     },
     "conflict": {

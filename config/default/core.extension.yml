@@ -30,8 +30,10 @@ module:
   file: 0
   filter: 0
   focal_point: 0
+  fpa: 0
   help: 0
   image: 0
+  js_cookie: 0
   layout_builder: 0
   layout_discovery: 0
   link: 0
