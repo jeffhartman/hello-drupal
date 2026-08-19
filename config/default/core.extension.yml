@@ -23,6 +23,7 @@ module:
   easy_breadcrumb: 0
   editor: 0
   entity: 0
+  entity_browser: 0
   field: 0
   field_ui: 0
   file: 0
