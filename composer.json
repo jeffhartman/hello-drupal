@@ -16,6 +16,7 @@
         "drupal/address": "^2.0",
         "drupal/admin_toolbar": "^3.6",
         "drupal/better_exposed_filters": "^7.1",
+        "drupal/color_field": "^3.0",
         "drupal/core-composer-scaffold": "^11.4",
         "drupal/core-project-message": "^11.4",
         "drupal/core-recipe-unpack": "^11.4",
