@@ -1,0 +1,92 @@
+# ------------------------------------------------------------------------------
+# Drupal 11 Project .gitignore
+# ------------------------------------------------------------------------------
+
+# Core/contrib managed by Composer
+/docroot/core/
+/docroot/modules/contrib/
+/docroot/profiles/contrib/
+/docroot/themes/contrib/
+/docroot/libraries/
+/drush/contrib/
+/vendor/
+
+# Scaffolded files
+/docroot/.csslintrc
+/docroot/.editorconfig
+/docroot/.eslintignore
+/docroot/.eslintrc.json
+/docroot/.gitattributes
+/docroot/.ht.router.php
+/docroot/autoload.php
+/docroot/index.php
+/docroot/README.md
+/docroot/robots.txt
+/docroot/update.php
+/docroot/.gitignore
+/docroot/profiles/.gitignore
+/docroot/sites/.gitignore
+# Ignore default settings and services files
+/docroot/sites/default/default.services.yml
+/docroot/sites/default/default.settings.php
+
+# Runtime-generated
+/docroot/sites/*/files
+/docroot/sites/*/private
+
+# Sensitive/local overrides
+/docroot/sites/development.services.yml
+/docroot/sites/*/settings.local.php
+/docroot/sites/settings.local.php
+
+# Example defaults
+example.gitignore
+example.settings.*
+example.sites.*
+
+# ------------------------------------------------------------------------------
+# Development / OS files
+# ------------------------------------------------------------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Editor/IDE
+.idea/
+*.swp
+.project/
+
+# ------------------------------------------------------------------------------
+# Backups & archives
+# ------------------------------------------------------------------------------
+.backups/*
+*.tar.gz
+*.zip
+*.sql
+*.gz
+
+# ------------------------------------------------------------------------------
+# Frontend / build tools
+# ------------------------------------------------------------------------------
+node_modules/
+npm-debug.log
+.sass-cache
+*.css.map
+
+# ------------------------------------------------------------------------------
+# Testing & QA artifacts
+# ------------------------------------------------------------------------------
+.phpunit.result.cache
+.phpcs-cache
+drupal-check-report.xml
+xhprof_*
+
+# ------------------------------------------------------------------------------
+# Environment files
+# ------------------------------------------------------------------------------
+.env*
