@@ -102,6 +102,7 @@ module:
   views_ui: 0
   viewsreference: 0
   webform: 0
+  webform_node: 0
   yearonly: 0
   pathauto: 1
   content_translation: 10
