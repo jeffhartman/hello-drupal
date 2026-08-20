@@ -49,6 +49,7 @@ module:
   jquery_ui_autocomplete: 0
   jquery_ui_menu: 0
   js_cookie: 0
+  language: 0
   layout_builder: 0
   layout_discovery: 0
   link: 0
@@ -97,6 +98,7 @@ module:
   webform: 0
   yearonly: 0
   pathauto: 1
+  content_translation: 10
   views: 10
   paragraphs: 11
   standard: 1000
