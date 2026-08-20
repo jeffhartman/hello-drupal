@@ -49,6 +49,7 @@
         "drupal/search_api": "^1.41",
         "drupal/search_api_algolia": "^3.1",
         "drupal/simple_sitemap": "^4.2",
+        "drupal/smart_date": "^4.3",
         "drupal/token": "^1.17",
         "drush/drush": "^13.7"
     },
