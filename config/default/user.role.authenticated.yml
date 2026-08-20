@@ -8,6 +8,7 @@ dependencies:
   module:
     - file
     - filter
+    - media
     - system
 _core:
   default_config_hash: wkW7P5A53YhGmsgamrmTbfwpZrqdnPYiJdoAZQtdmJg
@@ -20,3 +21,4 @@ permissions:
   - 'delete own files'
   - 'use text format basic_html'
   - 'use text format webform_default'
+  - 'view media'
