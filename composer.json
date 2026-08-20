@@ -35,6 +35,7 @@
         "drupal/menu_block": "^1.14",
         "drupal/menu_item_extras": "^3.1",
         "drupal/metatag": "^2.2",
+        "drupal/migrate_plus": "^6.0",
         "drupal/token": "^1.17",
         "drush/drush": "^13.7"
     },
