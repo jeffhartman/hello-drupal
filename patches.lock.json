@@ -1,6 +1,18 @@
 {
-    "_hash": "522afb23610961aa7008b6351bd484824ace96fccda8a9ec0ba6a13da4c866c0",
+    "_hash": "cb5d22915be25d81e8d4ff979732d448490ef79ac7689af9ea5a93d1377fa128",
     "patches": {
+        "drupal/draggableviews": [
+            {
+                "package": "drupal/draggableviews",
+                "description": "Fix RouteNotFoundException for view.this contextual link",
+                "url": "https://www.drupal.org/files/issues/2024-06-10/3316975-32-MR40.patch",
+                "sha256": "84b536712c71c26a3ed3662f075918e593097a3c28c62913b516335647ac8468",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ],
         "drupal/rabbit_hole": [
             {
                 "package": "drupal/rabbit_hole",

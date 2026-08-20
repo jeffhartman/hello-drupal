@@ -116,6 +116,9 @@
             "recipes/{$name}": ["type:drupal-recipe"]
         },
         "patches": {
+            "drupal/draggableviews": {
+                "Fix RouteNotFoundException for view.this contextual link": "https://www.drupal.org/files/issues/2024-06-10/3316975-32-MR40.patch"
+            },
             "drupal/rabbit_hole": {
                 "PHP 8.4 nullable parameters": "https://www.drupal.org/files/issues/2026-07-28/php84-nullable-params.patch"
             },
