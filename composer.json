@@ -46,6 +46,7 @@
         "drupal/restui": "^1.22",
         "drupal/robotstxt": "^1.6",
         "drupal/scheduler": "^2.3",
+        "drupal/search_api": "^1.41",
         "drupal/token": "^1.17",
         "drush/drush": "^13.7"
     },
