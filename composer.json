@@ -34,6 +34,7 @@
         "drupal/google_tag": "^2.0",
         "drupal/imageapi_optimize": "^4.2",
         "drupal/imageapi_optimize_gd": "^2.0",
+        "drupal/imageapi_optimize_webp": "^2.1",
         "drupal/inline_entity_form": "^3.0",
         "drupal/menu_block": "^1.14",
         "drupal/menu_item_extras": "^3.1",

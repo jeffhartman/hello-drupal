@@ -38,6 +38,7 @@ module:
   image: 0
   imageapi_optimize: 0
   imageapi_optimize_gd: 0
+  imageapi_optimize_webp: 0
   inline_entity_form: 0
   jquery_ui: 0
   jquery_ui_autocomplete: 0
