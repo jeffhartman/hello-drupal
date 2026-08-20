@@ -117,7 +117,8 @@
         },
         "patches": {
             "drupal/draggableviews": {
-                "Fix RouteNotFoundException for view.this contextual link": "https://www.drupal.org/files/issues/2024-06-10/3316975-32-MR40.patch"
+                "Fix RouteNotFoundException for view.this contextual link": "https://www.drupal.org/files/issues/2024-06-10/3316975-32-MR40.patch",
+                "PHP 8.4 nullable migration parameters": "https://git.drupalcode.org/project/draggableviews/-/commit/d28d6be55b19bf221ae7c1dfff13457721ef5ae5.patch"
             },
             "drupal/rabbit_hole": {
                 "PHP 8.4 nullable parameters": "https://www.drupal.org/files/issues/2026-07-28/php84-nullable-params.patch"

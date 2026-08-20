@@ -1,5 +1,5 @@
 {
-    "_hash": "cb5d22915be25d81e8d4ff979732d448490ef79ac7689af9ea5a93d1377fa128",
+    "_hash": "a8364aebdac7a274f726cdb0ba2f955766da675dcfd899c8b650afcab985ca96",
     "patches": {
         "drupal/draggableviews": [
             {
@@ -7,6 +7,16 @@
                 "description": "Fix RouteNotFoundException for view.this contextual link",
                 "url": "https://www.drupal.org/files/issues/2024-06-10/3316975-32-MR40.patch",
                 "sha256": "84b536712c71c26a3ed3662f075918e593097a3c28c62913b516335647ac8468",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            },
+            {
+                "package": "drupal/draggableviews",
+                "description": "PHP 8.4 nullable migration parameters",
+                "url": "https://git.drupalcode.org/project/draggableviews/-/commit/d28d6be55b19bf221ae7c1dfff13457721ef5ae5.patch",
+                "sha256": "eca8a657c53245b0cd905020df5cd6c5ee8b95517f34d1ebd42e7c32a359b8e8",
                 "depth": 1,
                 "extra": {
                     "provenance": "root"
