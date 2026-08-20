@@ -18,6 +18,7 @@
         "drupal/admin_toolbar": "^3.6",
         "drupal/better_exposed_filters": "^7.1",
         "drupal/color_field": "^3.0",
+        "drupal/commerce": "^3.3",
         "drupal/config_ignore": "^3.4",
         "drupal/config_split": "^2.0",
         "drupal/core-composer-scaffold": "^11.4",
