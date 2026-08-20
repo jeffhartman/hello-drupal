@@ -42,6 +42,7 @@
         "drupal/pathauto": "^1.15",
         "drupal/rabbit_hole": "^1.2",
         "drupal/range": "^1.6",
+        "drupal/redirect": "^1.13",
         "drupal/token": "^1.17",
         "drush/drush": "^13.7"
     },
