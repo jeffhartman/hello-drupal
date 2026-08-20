@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4e2846833548da4cc46897c900735ba7",
+    "content-hash": "460750ae7b70547a2487ae40f8bcd359",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -2923,6 +2923,55 @@
             "homepage": "https://www.drupal.org/project/imageapi_optimize",
             "support": {
                 "source": "https://git.drupalcode.org/project/imageapi_optimize"
+            }
+        },
+        {
+            "name": "drupal/imageapi_optimize_gd",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/imageapi_optimize_gd.git",
+                "reference": "2.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/imageapi_optimize_gd-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "aed60e688c60352dc93e2b08d7bb2eb329b22187"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10 || ^11",
+                "drupal/imageapi_optimize": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.2",
+                    "datestamp": "1782293090",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "michaellander",
+                    "homepage": "https://www.drupal.org/user/636494"
+                },
+                {
+                    "name": "plopesc",
+                    "homepage": "https://www.drupal.org/user/282415"
+                }
+            ],
+            "description": "Provides ImageAPI Optimize processor for adjusting image quality via GD.",
+            "homepage": "https://www.drupal.org/project/imageapi_optimize_gd",
+            "support": {
+                "source": "https://git.drupalcode.org/project/imageapi_optimize_gd"
             }
         },
         {
