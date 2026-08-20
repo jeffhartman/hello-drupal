@@ -81,6 +81,7 @@ module:
   restui: 0
   rh_media: 0
   rh_node: 0
+  rh_user: 0
   robotstxt: 0
   scheduler: 0
   search_api: 0
