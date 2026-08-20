@@ -1,0 +1,17 @@
+{
+    "_hash": "e207d14c65bc6953d88b453d33dfb08f631faee247554bd1ae9a23a568d0279d",
+    "patches": {
+        "drupal/rabbit_hole": [
+            {
+                "package": "drupal/rabbit_hole",
+                "description": "PHP 8.4 nullable parameters",
+                "url": "https://www.drupal.org/files/issues/2026-07-28/php84-nullable-params.patch",
+                "sha256": "c8dff0ef60d2c5741a93efef069603c05b50a015ebabf816db0a96f899faa07c",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ]
+    }
+}
