@@ -85,6 +85,7 @@ module:
   responsive_image: 0
   rest: 0
   restui: 0
+  rh_commerce: 0
   rh_media: 0
   rh_node: 0
   rh_taxonomy: 0
