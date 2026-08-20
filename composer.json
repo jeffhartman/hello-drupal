@@ -52,6 +52,7 @@
         "drupal/smart_date": "^4.3",
         "drupal/taxonomy_manager": "^2.0",
         "drupal/token": "^1.17",
+        "drupal/token_filter": "^2.2",
         "drush/drush": "^13.7"
     },
     "conflict": {

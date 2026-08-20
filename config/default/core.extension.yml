@@ -76,6 +76,7 @@ module:
   taxonomy_manager: 0
   text: 0
   token: 0
+  token_filter: 0
   toolbar: 0
   update: 0
   user: 0
