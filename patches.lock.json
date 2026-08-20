@@ -1,5 +1,5 @@
 {
-    "_hash": "e207d14c65bc6953d88b453d33dfb08f631faee247554bd1ae9a23a568d0279d",
+    "_hash": "522afb23610961aa7008b6351bd484824ace96fccda8a9ec0ba6a13da4c866c0",
     "patches": {
         "drupal/rabbit_hole": [
             {
@@ -7,6 +7,18 @@
                 "description": "PHP 8.4 nullable parameters",
                 "url": "https://www.drupal.org/files/issues/2026-07-28/php84-nullable-params.patch",
                 "sha256": "c8dff0ef60d2c5741a93efef069603c05b50a015ebabf816db0a96f899faa07c",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ],
+        "drupal/views_field_view": [
+            {
+                "package": "drupal/views_field_view",
+                "description": "Fix Drupal 11.4 views_ui_build_form_url error",
+                "url": "https://www.drupal.org/files/issues/2026-07-14/views_field_view-11.4-deprecated-function.patch",
+                "sha256": "95059cbab0cf7a93142440f5e0dd930586181d3c65dc7c9d87774a363a775f37",
                 "depth": 1,
                 "extra": {
                     "provenance": "root"

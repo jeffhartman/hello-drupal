@@ -117,6 +117,9 @@
         "patches": {
             "drupal/rabbit_hole": {
                 "PHP 8.4 nullable parameters": "https://www.drupal.org/files/issues/2026-07-28/php84-nullable-params.patch"
+            },
+            "drupal/views_field_view": {
+                "Fix Drupal 11.4 views_ui_build_form_url error": "https://www.drupal.org/files/issues/2026-07-14/views_field_view-11.4-deprecated-function.patch"
             }
         },
         "drupal-core-project-message": {
