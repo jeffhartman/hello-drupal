@@ -32,6 +32,7 @@ module:
   focal_point: 0
   fpa: 0
   geolocation: 0
+  google_tag: 0
   help: 0
   image: 0
   js_cookie: 0
