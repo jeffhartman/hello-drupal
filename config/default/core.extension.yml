@@ -46,6 +46,7 @@ module:
   metatag: 0
   migrate: 0
   migrate_plus: 0
+  migrate_tools: 0
   mysql: 0
   navigation: 0
   node: 0
