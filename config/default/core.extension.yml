@@ -25,6 +25,7 @@ module:
   config_split: 0
   contextual: 0
   crop: 0
+  ctools: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
