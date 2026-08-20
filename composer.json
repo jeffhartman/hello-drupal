@@ -65,6 +65,7 @@
         "drupal/twig_tweak": "^3.4",
         "drupal/views_bulk_operations": "^4.4",
         "drupal/views_field_view": "^1.0",
+        "drupal/viewsreference": "^2.0@beta",
         "drupal/webform": "^6.3",
         "drupal/yearonly": "^9.1",
         "drush/drush": "^13.7"
