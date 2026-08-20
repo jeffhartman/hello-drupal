@@ -85,6 +85,7 @@ module:
   views_field_view: 0
   views_ui: 0
   webform: 0
+  yearonly: 0
   pathauto: 1
   views: 10
   paragraphs: 11
