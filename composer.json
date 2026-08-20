@@ -34,6 +34,7 @@
         "drupal/google_tag": "^2.0",
         "drupal/menu_block": "^1.14",
         "drupal/menu_item_extras": "^3.1",
+        "drupal/token": "^1.17",
         "drush/drush": "^13.7"
     },
     "conflict": {
