@@ -75,6 +75,7 @@ module:
   rabbit_hole: 0
   range: 0
   redirect: 0
+  responsive_image: 0
   rest: 0
   restui: 0
   robotstxt: 0
