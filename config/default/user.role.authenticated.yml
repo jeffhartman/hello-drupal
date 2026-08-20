@@ -6,6 +6,7 @@ dependencies:
     - filter.format.basic_html
     - filter.format.webform_default
   module:
+    - commerce_product
     - file
     - filter
     - media
@@ -21,4 +22,5 @@ permissions:
   - 'delete own files'
   - 'use text format basic_html'
   - 'use text format webform_default'
+  - 'view commerce_product'
   - 'view media'
