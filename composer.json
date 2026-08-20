@@ -41,6 +41,7 @@
         "drupal/paragraphs": "^1.23",
         "drupal/pathauto": "^1.15",
         "drupal/rabbit_hole": "^1.2",
+        "drupal/range": "^1.6",
         "drupal/token": "^1.17",
         "drush/drush": "^13.7"
     },
