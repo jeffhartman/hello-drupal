@@ -6,6 +6,7 @@ dependencies:
     - filter.format.basic_html
     - filter.format.webform_default
   module:
+    - commerce_order
     - commerce_product
     - file
     - filter
@@ -24,3 +25,4 @@ permissions:
   - 'use text format webform_default'
   - 'view commerce_product'
   - 'view media'
+  - 'view own commerce_order'
