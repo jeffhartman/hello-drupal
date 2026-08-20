@@ -55,6 +55,7 @@
         "drupal/token_filter": "^2.2",
         "drupal/twig_tweak": "^3.4",
         "drupal/views_bulk_operations": "^4.4",
+        "drupal/views_field_view": "^1.0",
         "drush/drush": "^13.7"
     },
     "conflict": {
