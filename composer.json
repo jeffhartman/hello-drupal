@@ -53,6 +53,7 @@
         "drupal/taxonomy_manager": "^2.0",
         "drupal/token": "^1.17",
         "drupal/token_filter": "^2.2",
+        "drupal/twig_tweak": "^3.4",
         "drush/drush": "^13.7"
     },
     "conflict": {
