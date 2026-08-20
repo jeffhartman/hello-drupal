@@ -1,0 +1,23 @@
+uuid: 9b107211-1798-40d0-a52c-e4ddcf606068
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.audio.field_media_audio_file
+    - media.type.audio
+id: media.audio.media_library
+targetEntityType: media
+bundle: audio
+mode: media_library
+content: {  }
+hidden:
+  created: true
+  field_media_audio_file: true
+  langcode: true
+  name: true
+  path: true
+  publish_on: true
+  status: true
+  uid: true
+  unpublish_on: true
