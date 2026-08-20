@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe6961de41f9e44bba0f53acd0d66070",
+    "content-hash": "56843733ffec5e80fa01679c4eae5107",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -3408,17 +3408,17 @@
         },
         {
             "name": "drupal/imageapi_optimize_webp",
-            "version": "2.1.0",
+            "version": "3.0.0-beta1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/imageapi_optimize_webp.git",
-                "reference": "2.1.0"
+                "reference": "3.0.0-beta1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/imageapi_optimize_webp-2.1.0.zip",
-                "reference": "2.1.0",
-                "shasum": "d8976202255b52b4a1ebb7c76a634584f658358a"
+                "url": "https://ftp.drupal.org/files/projects/imageapi_optimize_webp-3.0.0-beta1.zip",
+                "reference": "3.0.0-beta1",
+                "shasum": "50d2aa8047b0f59974f25b2dbe1368c96d75d6f5"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11",
@@ -3427,11 +3427,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.1.0",
-                    "datestamp": "1735854739",
+                    "version": "3.0.0-beta1",
+                    "datestamp": "1782314589",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -11161,7 +11161,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "drupal/imageapi_optimize_webp": 10
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {},
