@@ -1,0 +1,19 @@
+uuid: f81fea05-f24c-484d-98b4-e41585e0d325
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_destination_id
+    - taxonomy.vocabulary.destinations
+id: taxonomy_term.destinations.field_destination_id
+field_name: field_destination_id
+entity_type: taxonomy_term
+bundle: destinations
+label: 'Destination ID'
+description: 'ANT, ARC, etc.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

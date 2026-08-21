@@ -1,0 +1,16 @@
+uuid: 3b82ac43-1fa8-451f-970a-0573a09f64da
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.destinations
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.destinations
+target_entity_type_id: taxonomy_term
+target_bundle: destinations
+default_langcode: site_default
+language_alterable: false

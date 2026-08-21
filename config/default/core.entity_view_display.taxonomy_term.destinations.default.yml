@@ -1,0 +1,33 @@
+uuid: a408cf88-70fb-45be-813f-4c5c83812733
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.destinations.field_destination_id
+    - taxonomy.vocabulary.destinations
+  module:
+    - text
+id: taxonomy_term.destinations.default
+targetEntityType: taxonomy_term
+bundle: destinations
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_destination_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true
