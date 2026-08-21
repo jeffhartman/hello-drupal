@@ -1,0 +1,14 @@
+uuid: 41d01f86-1353-4149-a58f-18d644ea7f24
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.departure
+id: node_type_departure
+entity_type_id: node_type
+entity_id: departure
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

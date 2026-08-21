@@ -1,0 +1,21 @@
+uuid: b70a801a-648e-4106-b11c-f6f37f9d8f3b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_departure_id
+field_name: field_departure_id
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: bc3fe63b-a35f-49a9-a95b-adf61b6854f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime_range
+    - node
+id: node.field_departure_date
+field_name: field_departure_date
+entity_type: node
+type: daterange
+settings:
+  datetime_type: date
+module: datetime_range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

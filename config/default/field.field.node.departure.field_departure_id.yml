@@ -1,0 +1,19 @@
+uuid: ce249914-71fe-4300-8362-b22f58149621
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_departure_id
+    - node.type.departure
+id: node.departure.field_departure_id
+field_name: field_departure_id
+entity_type: node
+bundle: departure
+label: 'Departure ID'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

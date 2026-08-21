@@ -1,0 +1,23 @@
+uuid: 6c085b9e-55c6-49d9-9509-b79453248f40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duration
+    - node.type.departure
+id: node.departure.field_duration
+field_name: field_duration
+entity_type: node
+bundle: departure
+label: Duration
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

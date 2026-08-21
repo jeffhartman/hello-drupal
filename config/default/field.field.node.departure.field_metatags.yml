@@ -1,0 +1,21 @@
+uuid: 61ad6553-4e19-468d-a439-372ed4606e96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.departure
+  module:
+    - metatag
+id: node.departure.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: departure
+label: Metatags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

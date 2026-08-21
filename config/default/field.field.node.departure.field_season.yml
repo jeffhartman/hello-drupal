@@ -1,0 +1,23 @@
+uuid: 31d9a8bb-4307-4341-a750-6474f649b158
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_season
+    - node.type.departure
+  module:
+    - yearonly
+id: node.departure.field_season
+field_name: field_season
+entity_type: node
+bundle: departure
+label: Season
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  yearonly_from: '2025'
+  yearonly_to: '+3 years'
+field_type: yearonly

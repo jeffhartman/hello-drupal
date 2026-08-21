@@ -1,0 +1,29 @@
+uuid: ddef6009-14b4-458b-884d-8f5c3b10a995
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_parent_expedition
+    - node.type.departure
+    - node.type.expedition
+id: node.departure.field_parent_expedition
+field_name: field_parent_expedition
+entity_type: node
+bundle: departure
+label: 'Parent Expedition'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      expedition: expedition
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

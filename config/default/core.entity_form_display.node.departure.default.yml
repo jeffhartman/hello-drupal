@@ -1,0 +1,258 @@
+uuid: d5b4d463-49ec-46f0-a1b1-f1135753697a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.departure.field_departure_date
+    - field.field.node.departure.field_departure_id
+    - field.field.node.departure.field_disembarkation_port
+    - field.field.node.departure.field_duration
+    - field.field.node.departure.field_embarkation_port
+    - field.field.node.departure.field_itinerary
+    - field.field.node.departure.field_languages
+    - field.field.node.departure.field_metatags
+    - field.field.node.departure.field_operator
+    - field.field.node.departure.field_parent_expedition
+    - field.field.node.departure.field_season
+    - field.field.node.departure.field_ship
+    - node.type.departure
+  module:
+    - datetime_range
+    - field_group
+    - metatag
+    - path
+    - yearonly
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_details
+        - group_redundancies_itinerary
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        direction: vertical
+        width_breakpoint: 640
+    group_details:
+      children:
+        - field_departure_id
+        - field_departure_date
+        - field_itinerary
+        - field_ship
+        - field_languages
+      label: Details
+      region: content
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_redundancies_itinerary:
+      children:
+        - field_parent_expedition
+        - field_operator
+        - field_season
+        - field_duration
+        - field_embarkation_port
+        - field_disembarkation_port
+      label: 'Redundancies from Itinerary'
+      region: content
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: 'Items we already get from the related itinerary. To be deleted?'
+        required_fields: true
+id: node.departure.default
+targetEntityType: node
+bundle: departure
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_departure_date:
+    type: daterange_default
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_departure_id:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_disembarkation_port:
+    type: entity_reference_autocomplete
+    weight: 29
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_duration:
+    type: number
+    weight: 27
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_embarkation_port:
+    type: entity_reference_autocomplete
+    weight: 28
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_itinerary:
+    type: entity_reference_autocomplete
+    weight: 12
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_languages:
+    type: entity_reference_autocomplete
+    weight: 14
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_metatags:
+    type: metatag_firehose
+    weight: 14
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_operator:
+    type: entity_reference_autocomplete
+    weight: 25
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_parent_expedition:
+    type: entity_reference_autocomplete
+    weight: 24
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_season:
+    type: yearonly_default
+    weight: 26
+    region: content
+    settings:
+      sort_order: asc
+    third_party_settings: {  }
+  field_ship:
+    type: entity_reference_autocomplete
+    weight: 13
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  promote: true
+  publish_on: true
+  sticky: true
+  unpublish_on: true

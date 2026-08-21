@@ -1,0 +1,29 @@
+uuid: 70e318cb-3980-4d96-8229-165e7a9c65e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_disembarkation_port
+    - node.type.departure
+    - taxonomy.vocabulary.ports
+id: node.departure.field_disembarkation_port
+field_name: field_disembarkation_port
+entity_type: node
+bundle: departure
+label: 'Disembarkation Port'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      ports: ports
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
