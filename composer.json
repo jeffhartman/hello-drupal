@@ -73,7 +73,8 @@
     },
     "require-dev": {
         "acquia/coding-standards": "^3.0",
-        "dealerdirect/phpcodesniffer-composer-installer": "^1.2"
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.2",
+        "mglaman/phpstan-drupal": "^2.1"
     },
     "conflict": {
         "drupal/drupal": "*"
