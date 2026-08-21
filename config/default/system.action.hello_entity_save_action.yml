@@ -1,0 +1,13 @@
+uuid: 9e6d4433-ca5d-49cd-9b7f-a4f0b22dac4a
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_entity
+_core:
+  default_config_hash: 1ZEgKuIcskk9AytXMBi4ugrx7Q88Ktwv4r5EkMs02yM
+id: hello_entity_save_action
+label: 'Save hello entities'
+type: hello_entity
+plugin: 'entity:save_action:hello_entity'
+configuration: {  }
