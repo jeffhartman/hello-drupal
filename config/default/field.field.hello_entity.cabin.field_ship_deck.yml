@@ -1,0 +1,29 @@
+uuid: 4846e4ea-c905-44a0-b646-43f4921607bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_ship_deck
+    - hello_entity.hello_entity_type.cabin
+    - hello_entity.hello_entity_type.ship_deck
+id: hello_entity.cabin.field_ship_deck
+field_name: field_ship_deck
+entity_type: hello_entity
+bundle: cabin
+label: 'Ship Deck'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:hello_entity'
+  handler_settings:
+    target_bundles:
+      ship_deck: ship_deck
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

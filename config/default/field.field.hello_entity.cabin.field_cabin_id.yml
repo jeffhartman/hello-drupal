@@ -1,0 +1,19 @@
+uuid: 5ac09214-b3e6-40ee-8783-8242787fbbbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_cabin_id
+    - hello_entity.hello_entity_type.cabin
+id: hello_entity.cabin.field_cabin_id
+field_name: field_cabin_id
+entity_type: hello_entity
+bundle: cabin
+label: 'Cabin ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
