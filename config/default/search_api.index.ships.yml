@@ -1,0 +1,105 @@
+uuid: 3482078d-1fb7-4b27-a4b9-c1e092dc8af4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_imo_number
+    - field.storage.node.field_operator
+    - field.storage.node.field_ship_flag
+    - field.storage.node.field_ship_year_built
+    - search_api.server.algolia
+  module:
+    - node
+    - taxonomy
+id: ships
+name: Ships
+description: ''
+read_only: false
+field_settings:
+  entity_id:
+    label: 'Node ID'
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  field_imo_number:
+    label: 'IMO Number'
+    datasource_id: 'entity:node'
+    property_path: field_imo_number
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_imo_number
+  field_ship_flag:
+    label: 'Ship Flag'
+    datasource_id: 'entity:node'
+    property_path: field_ship_flag
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_ship_flag
+  field_ship_year_built:
+    label: 'Year Built'
+    datasource_id: 'entity:node'
+    property_path: field_ship_year_built
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_ship_year_built
+  operator_name:
+    label: 'Operator » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_operator:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_operator
+      module:
+        - taxonomy
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+  url:
+    label: URI
+    property_path: search_api_url
+    type: string
+    configuration:
+      absolute: false
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - ship
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  custom_value: {  }
+  entity_status: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  delete_on_fail: true
+  index_directly: true
+  track_changes_in_references: true
+  algolia_index_name: ships
+  algolia_index_batch_deletion: '0'
+  object_id_field: ''
+  partially_update_objects: 0
+  algolia_index_list: ''
+server: algolia
