@@ -1,0 +1,9 @@
+hello_core.admin_views:
+  path: '/admin/hello'
+  defaults:
+    _title: 'Hello'
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+  requirements:
+    _role: 'administrator+content_editor'
+  options:
+    _admin_route: TRUE

@@ -1,0 +1,14 @@
+hello_core.admin_views:
+  title: 'Hello Admin Views'
+  description: 'Administrative pages for Hello Antarctica.'
+  route_name: '<nolink>'
+  parent: system.admin
+  weight: 99
+
+# Custom Hello modules that need configuration should use this menu as its parent.
+hello_core.hello_settings:
+  title: 'Hello Settings'
+  description: 'Settings for custom Hello modules.'
+  route_name: '<nolink>'
+  parent: system.admin_config
+  weight: -99

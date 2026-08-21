@@ -1,0 +1,23 @@
+/* css/hello_admin_overrides.css */
+
+/**
+ * Custom administrative overrides for the Gin theme.
+ */
+
+/* Hello Admin Menu */
+.toolbar .toolbar-bar .toolbar-icon-hello-core-admin-views::before {
+  -webkit-mask-image: url("../icons/hello-admin.svg") !important;
+  mask-image: url("../icons/hello-admin.svg") !important;
+}
+
+/* Admin Views */
+body .hello-admin caption,
+body .hello-admin .view-grouping-header {
+  font-size: 3rem;
+  text-align: left;
+  font-weight: bold;
+  line-height: 1.5em;
+  color: #042E5D;
+  /*margin-top: 1.5em;*/
+  margin-bottom: 0.25em;
+}

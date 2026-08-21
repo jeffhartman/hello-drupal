@@ -1,0 +1,5 @@
+name: 'Hello Core'
+type: module
+description: 'General functionality specific to the Hello family of sites.'
+package: HELLO
+core_version_requirement: ^10 || ^11

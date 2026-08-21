@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Hello Core module.
+ */
+
+/**
+ * Implements hook_page_attachments().
+ */
+function hello_core_page_attachments(array &$attachments): void {
+  $attachments['#attached']['library'][] = 'hello_core/admin_overrides';
+}
