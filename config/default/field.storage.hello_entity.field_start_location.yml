@@ -1,0 +1,19 @@
+uuid: 9d362e2a-f125-4008-9857-edec39825b53
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - hello_entity
+id: hello_entity.field_start_location
+field_name: field_start_location
+entity_type: hello_entity
+type: address
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
