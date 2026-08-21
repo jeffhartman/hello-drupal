@@ -1,0 +1,10 @@
+uuid: 7485bcad-c1bd-4e14-bbce-20e842f46158
+langcode: en
+status: true
+dependencies: {  }
+id: departure_cabin_category
+label: 'Departure Cabin Category'
+traits: {  }
+locked: false
+orderItemType: pkg
+generateTitle: false

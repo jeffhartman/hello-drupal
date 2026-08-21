@@ -1,0 +1,10 @@
+uuid: f3a6b9b7-d817-41ea-aa15-dca5ba8bd038
+langcode: en
+status: true
+dependencies: {  }
+id: pkg
+label: Package
+traits: {  }
+locked: false
+purchasableEntityType: commerce_product_variation
+orderType: booking

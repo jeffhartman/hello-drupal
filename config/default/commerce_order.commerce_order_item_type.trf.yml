@@ -1,0 +1,10 @@
+uuid: 594666f3-45ca-46ee-a0f9-930c704d368a
+langcode: en
+status: true
+dependencies: {  }
+id: trf
+label: Transfer
+traits: {  }
+locked: false
+purchasableEntityType: commerce_product_variation
+orderType: booking

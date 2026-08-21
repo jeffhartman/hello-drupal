@@ -1,0 +1,18 @@
+uuid: 66859669-98f5-4932-88db-31bbb2c61e5b
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_attribute_value.field_occupancy_is_share
+field_name: field_occupancy_is_share
+entity_type: commerce_product_attribute_value
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

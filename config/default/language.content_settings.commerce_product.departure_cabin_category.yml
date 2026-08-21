@@ -1,0 +1,11 @@
+uuid: cea75600-b9d4-47bf-b643-81669ca439f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.departure_cabin_category
+id: commerce_product.departure_cabin_category
+target_entity_type_id: commerce_product
+target_bundle: departure_cabin_category
+default_langcode: site_default
+language_alterable: false

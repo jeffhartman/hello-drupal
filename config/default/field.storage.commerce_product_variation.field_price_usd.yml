@@ -1,0 +1,19 @@
+uuid: cf8d1c07-c85d-4ee2-83e6-04dc8e8c8721
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_price
+    - commerce_product
+id: commerce_product_variation.field_price_usd
+field_name: field_price_usd
+entity_type: commerce_product_variation
+type: commerce_price
+settings: {  }
+module: commerce_price
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

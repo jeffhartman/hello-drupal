@@ -1,0 +1,24 @@
+uuid: 3b399e27-d47a-45a3-b45d-3cc84e9589e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.departure_cabin_category
+    - field.storage.commerce_product_variation.field_price_per_person_usd
+  module:
+    - commerce_price
+id: commerce_product_variation.departure_cabin_category.field_price_per_person_usd
+field_name: field_price_per_person_usd
+entity_type: commerce_product_variation
+bundle: departure_cabin_category
+label: 'Price Per Person USD'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_currencies:
+    - USD
+  allow_negative: false
+field_type: commerce_price

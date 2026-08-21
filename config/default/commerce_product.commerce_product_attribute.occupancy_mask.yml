@@ -1,0 +1,7 @@
+uuid: 9386eed5-8dfc-4e57-96d2-29cb6fce13bf
+langcode: en
+status: true
+dependencies: {  }
+id: occupancy_mask
+label: 'Occupancy Mask'
+elementType: select

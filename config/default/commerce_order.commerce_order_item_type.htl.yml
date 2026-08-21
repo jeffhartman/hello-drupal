@@ -1,0 +1,10 @@
+uuid: a7dd97ad-fc7e-475e-a75a-45cdef4919ea
+langcode: en
+status: true
+dependencies: {  }
+id: htl
+label: Hotel
+traits: {  }
+locked: false
+purchasableEntityType: commerce_product_variation
+orderType: booking

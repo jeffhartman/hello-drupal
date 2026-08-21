@@ -1,0 +1,73 @@
+uuid: f5f4e8e9-8992-47f0-95a5-d86979ba4c48
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_attribute.occupancy_mask
+    - field.field.commerce_product_attribute_value.occupancy_mask.field_occupancy_description
+    - field.field.commerce_product_attribute_value.occupancy_mask.field_occupancy_is_share
+    - field.field.commerce_product_attribute_value.occupancy_mask.field_occupancy_mask
+    - field.field.commerce_product_attribute_value.occupancy_mask.field_occupancy_mask_label
+    - field.field.commerce_product_attribute_value.occupancy_mask.field_occupancy_num_pax
+    - field.field.commerce_product_attribute_value.occupancy_mask.field_occupancy_room_label
+    - field.field.commerce_product_attribute_value.occupancy_mask.field_occupancy_share_gender
+id: commerce_product_attribute_value.occupancy_mask.default
+targetEntityType: commerce_product_attribute_value
+bundle: occupancy_mask
+mode: default
+content:
+  field_occupancy_is_share:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_occupancy_mask:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_occupancy_mask_label:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_occupancy_num_pax:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_occupancy_room_label:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_occupancy_share_gender:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_occupancy_description: true
+  langcode: true

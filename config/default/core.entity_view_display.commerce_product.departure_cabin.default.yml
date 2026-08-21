@@ -1,0 +1,63 @@
+uuid: 44c6f5e7-0154-4955-9041-f9a4344e8bdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.departure_cabin
+    - field.field.commerce_product.departure_cabin.body
+    - field.field.commerce_product.departure_cabin.field_cabin_category
+    - field.field.commerce_product.departure_cabin.field_ship
+  module:
+    - commerce_product
+    - text
+id: commerce_product.departure_cabin.default
+targetEntityType: commerce_product
+bundle: departure_cabin
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_cabin_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_ship:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  created: true
+  langcode: true
+  search_api_excerpt: true
+  stores: true
+  uid: true

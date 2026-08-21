@@ -1,0 +1,21 @@
+uuid: 508ea323-1a19-4091-b1fd-30aec698dad4
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_attribute_value.field_occupancy_mask
+field_name: field_occupancy_mask
+entity_type: commerce_product_attribute_value
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

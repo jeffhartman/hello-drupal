@@ -1,0 +1,20 @@
+uuid: 31381524-2808-4814-b501-d5d12c1739ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - hello_entity
+id: commerce_product.field_cabin_category
+field_name: field_cabin_category
+entity_type: commerce_product
+type: entity_reference
+settings:
+  target_type: hello_entity
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

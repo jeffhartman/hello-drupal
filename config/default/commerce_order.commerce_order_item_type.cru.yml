@@ -1,0 +1,10 @@
+uuid: dbd74c37-0315-4275-8715-70e09d1ab5d3
+langcode: en
+status: true
+dependencies: {  }
+id: cru
+label: Cruise
+traits: {  }
+locked: false
+purchasableEntityType: commerce_product_variation
+orderType: booking

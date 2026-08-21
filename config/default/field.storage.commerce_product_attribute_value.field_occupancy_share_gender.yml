@@ -1,0 +1,27 @@
+uuid: 0948e963-5104-459e-a7c3-486ce74bd579
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - options
+id: commerce_product_attribute_value.field_occupancy_share_gender
+field_name: field_occupancy_share_gender
+entity_type: commerce_product_attribute_value
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: M
+      label: Male
+    -
+      value: F
+      label: Female
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

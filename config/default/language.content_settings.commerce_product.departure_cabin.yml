@@ -1,0 +1,11 @@
+uuid: b4c9f7e5-b801-4f1f-8c79-6a814b2bb2ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.departure_cabin
+id: commerce_product.departure_cabin
+target_entity_type_id: commerce_product
+target_bundle: departure_cabin
+default_langcode: site_default
+language_alterable: false

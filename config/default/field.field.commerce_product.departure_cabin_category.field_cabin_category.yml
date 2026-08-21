@@ -1,0 +1,29 @@
+uuid: 17ee8a00-9847-47c1-9571-fbcd6ac1a5d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.departure_cabin_category
+    - field.storage.commerce_product.field_cabin_category
+    - hello_entity.hello_entity_type.cabin_category
+id: commerce_product.departure_cabin_category.field_cabin_category
+field_name: field_cabin_category
+entity_type: commerce_product
+bundle: departure_cabin_category
+label: 'Cabin Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:hello_entity'
+  handler_settings:
+    target_bundles:
+      cabin_category: cabin_category
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,29 @@
+uuid: 68f1fc9c-dd62-4a3d-8962-916ac7a160d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.departure_cabin_category
+    - field.storage.commerce_product.field_departure
+    - node.type.departure
+id: commerce_product.departure_cabin_category.field_departure
+field_name: field_departure
+entity_type: commerce_product
+bundle: departure_cabin_category
+label: Departure
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      departure: departure
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

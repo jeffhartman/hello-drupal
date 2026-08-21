@@ -1,0 +1,19 @@
+uuid: a2f22197-63c9-4732-90da-f13a2a05a3c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_attribute.occupancy_mask
+    - field.storage.commerce_product_attribute_value.field_occupancy_description
+id: commerce_product_attribute_value.occupancy_mask.field_occupancy_description
+field_name: field_occupancy_description
+entity_type: commerce_product_attribute_value
+bundle: occupancy_mask
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

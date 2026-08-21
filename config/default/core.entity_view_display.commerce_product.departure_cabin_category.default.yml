@@ -1,0 +1,82 @@
+uuid: fd3e4675-1af2-430e-913a-3fd94a39a102
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.departure_cabin_category
+    - field.field.commerce_product.departure_cabin_category.body
+    - field.field.commerce_product.departure_cabin_category.field_availability_status
+    - field.field.commerce_product.departure_cabin_category.field_cabin_category
+    - field.field.commerce_product.departure_cabin_category.field_departure
+    - field.field.commerce_product.departure_cabin_category.field_ship
+  module:
+    - commerce_product
+    - text
+id: commerce_product.departure_cabin_category.default
+targetEntityType: commerce_product
+bundle: departure_cabin_category
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_availability_status:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_cabin_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_departure:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_ship:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  created: true
+  langcode: true
+  search_api_excerpt: true
+  stores: true
+  uid: true

@@ -1,0 +1,16 @@
+uuid: fcf9ae0f-536d-4f31-b5d3-0400dad7cb19
+langcode: en
+status: true
+dependencies: {  }
+id: booking
+label: Booking
+traits: {  }
+locked: false
+workflow: order_fulfillment
+showOrderEditLinks: true
+numberPattern: order_default
+refresh_mode: customer
+refresh_frequency: 300
+sendReceipt: true
+receiptBcc: ''
+receiptSubject: ''
