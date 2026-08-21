@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+## Description: Run PHPStan.
+## Usage: phpstan
+## Example: "ddev phpstan"
+
+YELLOW='\033[38;5;226m'
+NC='\033[0m'
+
+echo -e "${YELLOW}Running PHPStan (phpstan) using phpstan.neon${NC}.";
+phpstan
+exit 0
