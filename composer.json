@@ -71,6 +71,10 @@
         "drupal/yearonly": "^9.1",
         "drush/drush": "^13.7"
     },
+    "require-dev": {
+        "acquia/coding-standards": "^3.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.2"
+    },
     "conflict": {
         "drupal/drupal": "*"
     },
@@ -134,6 +138,7 @@
                 "homepage",
                 "support"
             ]
-        }
+        },
+        "phpcodesniffer-search-depth": "4"
     }
 }
