@@ -1,0 +1,14 @@
+uuid: c0d82fca-4f39-41ee-8f8a-438dfbe7b669
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.languages
+id: taxonomy_vocabulary_languages
+entity_type_id: taxonomy_vocabulary
+entity_id: languages
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied
