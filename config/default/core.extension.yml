@@ -50,6 +50,7 @@ module:
   google_tag: 0
   hello_core: 0
   hello_entity: 0
+  hello_migrate: 0
   image: 0
   imageapi_optimize: 0
   imageapi_optimize_gd: 0
