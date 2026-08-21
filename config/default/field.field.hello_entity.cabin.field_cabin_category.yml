@@ -1,0 +1,29 @@
+uuid: 63f0e044-e8ce-4d2a-abc6-df64db4ba680
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_cabin_category
+    - hello_entity.hello_entity_type.cabin
+    - hello_entity.hello_entity_type.cabin_category
+id: hello_entity.cabin.field_cabin_category
+field_name: field_cabin_category
+entity_type: hello_entity
+bundle: cabin
+label: 'Cabin Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:hello_entity'
+  handler_settings:
+    target_bundles:
+      cabin_category: cabin_category
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

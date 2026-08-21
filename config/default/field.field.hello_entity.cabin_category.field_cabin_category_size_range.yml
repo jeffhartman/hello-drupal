@@ -1,0 +1,35 @@
+uuid: 67386b3e-dd07-438b-bf20-6367987b4e4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_cabin_category_size_range
+    - hello_entity.hello_entity_type.cabin_category
+  module:
+    - range
+id: hello_entity.cabin_category.field_cabin_category_size_range
+field_name: field_cabin_category_size_range
+entity_type: hello_entity
+bundle: cabin_category
+label: 'Cabin Category Size Range'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  field:
+    prefix: ''
+    suffix: ''
+  from:
+    prefix: ''
+    suffix: ''
+  to:
+    prefix: ''
+    suffix: ' sq. ft.'
+  combined:
+    prefix: ''
+    suffix: ' sq. ft.'
+field_type: range_integer

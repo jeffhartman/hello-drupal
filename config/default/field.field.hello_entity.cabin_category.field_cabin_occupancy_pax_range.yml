@@ -1,0 +1,35 @@
+uuid: bd7400e4-6ea4-44e8-b87e-5df7bd194c73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_cabin_occupancy_pax_range
+    - hello_entity.hello_entity_type.cabin_category
+  module:
+    - range
+id: hello_entity.cabin_category.field_cabin_occupancy_pax_range
+field_name: field_cabin_occupancy_pax_range
+entity_type: hello_entity
+bundle: cabin_category
+label: 'Cabin Occupancy Pax Range'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  field:
+    prefix: ''
+    suffix: ''
+  from:
+    prefix: ''
+    suffix: ''
+  to:
+    prefix: ''
+    suffix: passengers
+  combined:
+    prefix: ''
+    suffix: ''
+field_type: range_integer

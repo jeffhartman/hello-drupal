@@ -1,0 +1,291 @@
+uuid: 0d8bf2e5-b8cb-4d8a-a73b-3ce357ea46f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.hello_entity.cabin_category.field_body
+    - field.field.hello_entity.cabin_category.field_cabin_bed_configuration
+    - field.field.hello_entity.cabin_category.field_cabin_category_cabin_count
+    - field.field.hello_entity.cabin_category.field_cabin_category_id
+    - field.field.hello_entity.cabin_category.field_cabin_category_images
+    - field.field.hello_entity.cabin_category.field_cabin_category_size_range
+    - field.field.hello_entity.cabin_category.field_cabin_class
+    - field.field.hello_entity.cabin_category.field_cabin_occupancy_pax_range
+    - field.field.hello_entity.cabin_category.field_cabins
+    - field.field.hello_entity.cabin_category.field_display_title
+    - field.field.hello_entity.cabin_category.field_legend_color
+    - field.field.hello_entity.cabin_category.field_ship
+    - field.field.hello_entity.cabin_category.field_ship_decks
+    - hello_entity.hello_entity_type.cabin_category
+  module:
+    - color_field
+    - field_group
+    - media_library
+    - range
+    - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_description
+        - group_categorization
+        - group_specifications
+        - group_media
+        - group_cabins
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        direction: vertical
+        width_breakpoint: 640
+    group_description:
+      children:
+        - field_display_title
+        - field_body
+      label: Description
+      region: content
+      parent_name: group_tabs
+      weight: 15
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_categorization:
+      children:
+        - field_cabin_category_id
+        - field_cabin_class
+        - field_ship
+        - field_ship_decks
+        - field_legend_color
+      label: Categorization
+      region: content
+      parent_name: group_tabs
+      weight: 16
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_media:
+      children:
+        - field_images
+      label: Media
+      region: content
+      parent_name: group_tabs
+      weight: 18
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_specifications:
+      children:
+        - field_cabin_category_size_range
+        - field_cabin_occupancy_pax_range
+        - field_cabin_bed_configuration
+      label: Specifications
+      region: content
+      parent_name: group_tabs
+      weight: 17
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_cabins:
+      children:
+        - field_cabin_category_cabin_count
+        - field_cabins
+      label: Cabins
+      region: content
+      parent_name: group_tabs
+      weight: 19
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+id: hello_entity.cabin_category.default
+targetEntityType: hello_entity
+bundle: cabin_category
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_body:
+    type: text_textarea_with_summary
+    weight: 7
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_cabin_bed_configuration:
+    type: string_textfield
+    weight: 19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cabin_category_cabin_count:
+    type: number
+    weight: 14
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_cabin_category_id:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cabin_category_images:
+    type: media_library_widget
+    weight: 26
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_cabin_category_size_range:
+    type: range
+    weight: 17
+    region: content
+    settings:
+      label:
+        from: From
+        to: to
+      placeholder:
+        from: ''
+        to: ''
+    third_party_settings: {  }
+  field_cabin_class:
+    type: options_buttons
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cabin_occupancy_pax_range:
+    type: range
+    weight: 18
+    region: content
+    settings:
+      label:
+        from: From
+        to: to
+      placeholder:
+        from: ''
+        to: ''
+    third_party_settings: {  }
+  field_cabins:
+    type: entity_reference_autocomplete
+    weight: 15
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_display_title:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_legend_color:
+    type: color_field_widget_default
+    weight: 15
+    region: content
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
+    third_party_settings: {  }
+  field_ship:
+    type: options_select
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ship_decks:
+    type: entity_reference_autocomplete
+    weight: 14
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: false
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true

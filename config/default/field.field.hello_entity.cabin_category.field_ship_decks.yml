@@ -1,0 +1,29 @@
+uuid: 3cab1777-0e3e-475b-80ef-f9c54c355b7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_ship_decks
+    - hello_entity.hello_entity_type.cabin_category
+    - hello_entity.hello_entity_type.ship_deck
+id: hello_entity.cabin_category.field_ship_decks
+field_name: field_ship_decks
+entity_type: hello_entity
+bundle: cabin_category
+label: 'Ship Decks'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:hello_entity'
+  handler_settings:
+    target_bundles:
+      ship_deck: ship_deck
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

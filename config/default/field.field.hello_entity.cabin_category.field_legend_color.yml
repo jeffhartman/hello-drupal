@@ -1,0 +1,22 @@
+uuid: 66c4b2f3-ff04-492c-8465-ae6cd809b8a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_legend_color
+    - hello_entity.hello_entity_type.cabin_category
+  module:
+    - color_field
+id: hello_entity.cabin_category.field_legend_color
+field_name: field_legend_color
+entity_type: hello_entity
+bundle: cabin_category
+label: 'Legend Color'
+description: 'The color used to indicate this cabin category in deck plan drawings.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

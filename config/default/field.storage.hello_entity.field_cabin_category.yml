@@ -1,0 +1,19 @@
+uuid: 014e23b5-9d3a-4700-a40f-d8de37cbfcdb
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_entity
+id: hello_entity.field_cabin_category
+field_name: field_cabin_category
+entity_type: hello_entity
+type: entity_reference
+settings:
+  target_type: hello_entity
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

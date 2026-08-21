@@ -1,0 +1,23 @@
+uuid: 21eb989a-7076-4815-a2aa-f84bf4fab08d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_cabin_category_cabin_count
+    - hello_entity.hello_entity_type.cabin_category
+id: hello_entity.cabin_category.field_cabin_category_cabin_count
+field_name: field_cabin_category_cabin_count
+entity_type: hello_entity
+bundle: cabin_category
+label: 'Cabin Category Cabin Count'
+description: 'The number of cabins that are found in this cabin category.<br /><strong>Dev note: This field may be temporary until all cabins can be entered as cabin nodes. Then we could get the cabin count programmatically via query, etc.</strong>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

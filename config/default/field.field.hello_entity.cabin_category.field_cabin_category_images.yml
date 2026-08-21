@@ -1,0 +1,29 @@
+uuid: 96c71767-5278-4c44-90c6-943ac3a94293
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_cabin_category_images
+    - hello_entity.hello_entity_type.cabin_category
+    - media.type.image
+id: hello_entity.cabin_category.field_cabin_category_images
+field_name: field_cabin_category_images
+entity_type: hello_entity
+bundle: cabin_category
+label: 'Cabin Category Images'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

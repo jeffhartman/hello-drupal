@@ -1,0 +1,205 @@
+uuid: d0e66f72-6a67-496c-a5ef-ac86fb0c5d1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.hello_entity.cabin_category.field_body
+    - field.field.hello_entity.cabin_category.field_cabin_bed_configuration
+    - field.field.hello_entity.cabin_category.field_cabin_category_cabin_count
+    - field.field.hello_entity.cabin_category.field_cabin_category_id
+    - field.field.hello_entity.cabin_category.field_cabin_category_images
+    - field.field.hello_entity.cabin_category.field_cabin_category_size_range
+    - field.field.hello_entity.cabin_category.field_cabin_class
+    - field.field.hello_entity.cabin_category.field_cabin_occupancy_pax_range
+    - field.field.hello_entity.cabin_category.field_cabins
+    - field.field.hello_entity.cabin_category.field_display_title
+    - field.field.hello_entity.cabin_category.field_legend_color
+    - field.field.hello_entity.cabin_category.field_ship
+    - field.field.hello_entity.cabin_category.field_ship_decks
+    - hello_entity.hello_entity_type.cabin_category
+  module:
+    - color_field
+    - range
+    - text
+    - user
+id: hello_entity.cabin_category.default
+targetEntityType: hello_entity
+bundle: cabin_category
+mode: default
+content:
+  created:
+    type: timestamp
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_cabin_bed_configuration:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 33
+    region: content
+  field_cabin_category_cabin_count:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  field_cabin_category_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_cabin_category_images:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 36
+    region: content
+  field_cabin_category_size_range:
+    type: range_integer
+    label: above
+    settings:
+      range_separator: '-'
+      thousand_separator: ''
+      range_combine: true
+      field_prefix_suffix: false
+      from_prefix_suffix: false
+      to_prefix_suffix: false
+      combined_prefix_suffix: false
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_cabin_class:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 34
+    region: content
+  field_cabin_occupancy_pax_range:
+    type: range_integer
+    label: above
+    settings:
+      range_separator: '-'
+      thousand_separator: ''
+      range_combine: true
+      field_prefix_suffix: false
+      from_prefix_suffix: false
+      to_prefix_suffix: false
+      combined_prefix_suffix: false
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_cabins:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_display_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_legend_color:
+    type: color_field_formatter_text
+    label: above
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    weight: 35
+    region: content
+  field_ship:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_ship_decks:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  status:
+    type: boolean
+    label: above
+    settings:
+      format: enabled-disabled
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  uid:
+    type: author
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,26 @@
+uuid: bd0effc1-e5f5-4b92-99f9-ee3b16727288
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_body
+    - filter.format.basic_html
+    - hello_entity.hello_entity_type.cabin_category
+  module:
+    - text
+id: hello_entity.cabin_category.field_body
+field_name: field_body
+entity_type: hello_entity
+bundle: cabin_category
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - basic_html
+field_type: text_with_summary

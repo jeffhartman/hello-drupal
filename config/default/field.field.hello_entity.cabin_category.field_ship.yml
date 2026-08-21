@@ -1,0 +1,29 @@
+uuid: 0438be9c-b587-40e5-8fe3-dc0a1ab0e499
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_ship
+    - hello_entity.hello_entity_type.cabin_category
+    - node.type.ship
+id: hello_entity.cabin_category.field_ship
+field_name: field_ship
+entity_type: hello_entity
+bundle: cabin_category
+label: Ship
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      ship: ship
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

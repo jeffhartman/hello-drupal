@@ -1,0 +1,6 @@
+uuid: f9106e58-2d54-4000-aa00-966a236d056f
+langcode: en
+status: true
+dependencies: {  }
+id: cabin_category
+label: 'Cabin Category'

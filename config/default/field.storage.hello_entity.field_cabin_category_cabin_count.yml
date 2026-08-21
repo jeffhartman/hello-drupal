@@ -1,0 +1,20 @@
+uuid: dc0068eb-e2a4-4aae-8afd-7c32b55a58ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_entity
+id: hello_entity.field_cabin_category_cabin_count
+field_name: field_cabin_category_cabin_count
+entity_type: hello_entity
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
