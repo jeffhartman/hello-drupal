@@ -1,0 +1,16 @@
+uuid: 965e97e0-d261-4f70-9626-852105370356
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.expedition
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.expedition
+target_entity_type_id: node
+target_bundle: expedition
+default_langcode: site_default
+language_alterable: false

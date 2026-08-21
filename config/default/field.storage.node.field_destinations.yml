@@ -1,0 +1,20 @@
+uuid: 6b8c99a1-37b7-425f-852d-21f16f213465
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_destinations
+field_name: field_destinations
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

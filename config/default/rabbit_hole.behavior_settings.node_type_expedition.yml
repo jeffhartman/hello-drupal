@@ -1,0 +1,14 @@
+uuid: 9ee03d53-790f-49a0-af21-db00ca4e1e82
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.expedition
+id: node_type_expedition
+entity_type_id: node_type
+entity_id: expedition
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied
