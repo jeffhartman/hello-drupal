@@ -1,0 +1,14 @@
+uuid: 0e01f592-54c2-41f8-8398-33ffa072a6ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.team_member
+id: node_type_team_member
+entity_type_id: node_type
+entity_id: team_member
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

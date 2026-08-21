@@ -1,0 +1,78 @@
+uuid: 1a896c59-e2b0-4861-b359-dae96af1de4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.team_member.field_body
+    - field.field.node.team_member.field_first_name
+    - field.field.node.team_member.field_job_title
+    - field.field.node.team_member.field_languages
+    - field.field.node.team_member.field_last_name
+    - field.field.node.team_member.field_metatags
+    - node.type.team_member
+  module:
+    - metatag
+    - text
+    - user
+id: node.team_member.default
+targetEntityType: node
+bundle: team_member
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_first_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_job_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_languages:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_last_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true
