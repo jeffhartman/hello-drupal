@@ -1,4 +1,4 @@
-uuid: 3f7b497e-58bc-4d3e-8b8d-c10221a36a94
+uuid: 40332fb6-a4c0-43ac-add5-89772bcfd323
 langcode: en
 status: true
 dependencies:
@@ -30,4 +30,3 @@ content:
 hidden:
   langcode: true
   member_for: true
-  search_api_excerpt: true

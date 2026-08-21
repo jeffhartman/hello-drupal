@@ -1,4 +1,4 @@
-uuid: ff7a8458-fd2f-4620-840d-0f1c6ad27db9
+uuid: 1af02b90-3559-4289-b58e-17f126c0ae80
 langcode: en
 status: true
 dependencies:
@@ -26,6 +26,7 @@ content:
 hidden:
   adjustments: true
   billing_profile: true
+  coupons: true
   customer_comments: true
   ip_address: true
   order_items: true

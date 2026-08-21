@@ -1,4 +1,4 @@
-uuid: 371ae8b0-0c0a-4a69-8263-73e79f2e3922
+uuid: 89e2bc56-3a21-4512-a620-c756ff429c14
 langcode: en
 status: true
 dependencies:
@@ -45,6 +45,7 @@ content:
       draggable: true
     third_party_settings: {  }
 hidden:
+  coupons: true
   created: true
   customer_comments: true
   ip_address: true

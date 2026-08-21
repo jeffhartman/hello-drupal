@@ -1,4 +1,4 @@
-uuid: bc109bd3-2724-4322-ad78-392a83899d67
+uuid: 264292cb-a8f5-461e-ac33-cee2c2a39db1
 langcode: en
 status: true
 dependencies:
@@ -52,6 +52,14 @@ content:
       timezone: ''
     third_party_settings: {  }
     weight: 2
+    region: content
+  coupons:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
     region: content
   created:
     type: timestamp
