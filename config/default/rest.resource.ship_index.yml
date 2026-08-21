@@ -1,0 +1,17 @@
+uuid: efa6a57c-472b-4c58-9bae-7ca3331b71cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_api
+    - serialization
+    - user
+id: ship_index
+plugin_id: ship_index
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
