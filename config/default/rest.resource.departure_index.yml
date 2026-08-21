@@ -1,0 +1,17 @@
+uuid: 4960103e-cf99-4ae3-afc9-1eb7dee7aa9e
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_api
+    - serialization
+    - user
+id: departure_index
+plugin_id: departure_index
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
