@@ -6,6 +6,7 @@ dependencies:
     - filter.format.restricted_html
     - rest.resource.expedition_detail
     - rest.resource.expedition_index
+    - rest.resource.ship_detail
     - rest.resource.ship_index
   module:
     - commerce_product
@@ -23,6 +24,7 @@ permissions:
   - 'access content'
   - 'restful get expedition_detail'
   - 'restful get expedition_index'
+  - 'restful get ship_detail'
   - 'restful get ship_index'
   - 'use text format restricted_html'
   - 'view commerce_product'
