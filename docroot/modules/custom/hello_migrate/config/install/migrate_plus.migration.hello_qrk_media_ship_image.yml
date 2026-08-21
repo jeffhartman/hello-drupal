@@ -1,0 +1,75 @@
+id: hello_qrk_media_ship_image
+label: 'Hello Media: QRK : Ship Image'
+
+source:
+  plugin: dynamic_url
+  data_fetcher_plugin: http_archive
+  data_parser_plugin: json_single_item
+  index_url: https://www.quarkexpeditions.com/api/public/1/ship
+  detail_url: https://www.quarkexpeditions.com/api/public/1/ship/{id}
+  exclude_ids:
+    - 11006
+  artifact_directory: 'private://migration-artifacts/qrk/ship'
+
+  parent_fields:
+    id: ship_nid
+
+  item_selector: images
+
+  fields:
+    -
+      name: ship_nid
+      label: 'Ship Node ID'
+      selector: id
+    -
+      name: source_url
+      label: 'Source URL'
+      selector: fullsize_url
+    -
+      name: title
+      label: 'Title'
+      selector: title
+    -
+      name: alt
+      label: 'Alt text'
+      selector: alt
+    -
+      name: thumbnail_url
+      label: 'Thumbnail URL'
+      selector: thumbnail_url
+
+  ids:
+    source_url:
+      type: string
+
+destination:
+  plugin: entity:media
+  default_bundle: image
+
+process:
+  name: title
+
+  field_media_image/target_id:
+    plugin: migration_lookup
+    migration: hello_qrk_file_ship_image
+    source: source_url
+    no_stub: true
+
+  field_media_image/alt: alt
+  field_media_image/title: title
+
+  status:
+    plugin: default_value
+    default_value: 1
+
+migration_dependencies:
+  required: []
+  optional:
+    - hello_qrk_file_ship_image
+migration_tags:
+  - hello
+  - hello_qrk
+  - hello_media
+  - hello_media_image
+  - hello_ship
+migration_group: hello_media

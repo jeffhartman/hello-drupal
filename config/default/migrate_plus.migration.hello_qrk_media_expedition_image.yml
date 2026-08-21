@@ -1,0 +1,72 @@
+uuid: 4c24c15b-58a4-4617-a5ba-e94588676cae
+langcode: en
+status: true
+dependencies: {  }
+id: hello_qrk_media_expedition_image
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - hello
+  - hello_qrk
+  - hello_media
+  - hello_media_image
+  - hello_expedition
+migration_group: hello_media
+label: 'Hello Media: QRK : Expedition Image'
+source:
+  plugin: dynamic_url
+  data_fetcher_plugin: http_archive
+  data_parser_plugin: json_single_item
+  index_url: 'https://www.quarkexpeditions.com/api/public/1/expedition'
+  detail_url: 'https://www.quarkexpeditions.com/api/public/1/expedition/{id}'
+  exclude_ids: {  }
+  artifact_directory: 'private://migration-artifacts/qrk/expedition'
+  parent_fields:
+    id: expedition_id
+  item_selector: images
+  fields:
+    -
+      name: expedition_id
+      label: 'Expedition ID'
+      selector: expedition_id
+    -
+      name: source_url
+      label: 'Source URL'
+      selector: fullsize_url
+    -
+      name: title
+      label: Title
+      selector: title
+    -
+      name: alt
+      label: 'Alt text'
+      selector: alt
+    -
+      name: thumbnail_url
+      label: 'Thumbnail URL'
+      selector: thumbnail_url
+  ids:
+    source_url:
+      type: string
+process:
+  name: title
+  field_media_image/target_id:
+    plugin: migration_lookup
+    migration: hello_qrk_file_expedition_image
+    source: source_url
+    no_stub: true
+  field_media_image/alt: alt
+  field_media_image/title: title
+  status:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity:media'
+  default_bundle: image
+idMap: {  }
+migration_dependencies:
+  required: {  }
+  optional:
+    - hello_qrk_file_expedition_image
+include: null

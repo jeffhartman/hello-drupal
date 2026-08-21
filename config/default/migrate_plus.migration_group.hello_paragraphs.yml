@@ -1,0 +1,19 @@
+uuid: bdb6b5b8-de51-40a4-ac16-a37a055ccf61
+langcode: en
+status: true
+dependencies: {  }
+id: hello_paragraphs
+label: 'Hello: Paragraphs'
+description: 'Imports data into paragraph entities.'
+source_type: JSON
+module: null
+shared_configuration:
+  source:
+    track_changes: true
+  process:
+    status:
+      plugin: default_value
+      default_value: 1
+    uid:
+      plugin: default_value
+      default_value: 1

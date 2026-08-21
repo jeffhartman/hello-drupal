@@ -1,0 +1,19 @@
+uuid: b5df4d58-f872-410a-b2c8-2bb5bd740477
+langcode: en
+status: true
+dependencies: {  }
+id: hello_entities
+label: 'Hello: Entities'
+description: 'Imports data into Hello entities.'
+source_type: JSON
+module: null
+shared_configuration:
+  source:
+    track_changes: true
+  process:
+    status:
+      plugin: default_value
+      default_value: 1
+    uid:
+      plugin: default_value
+      default_value: 1

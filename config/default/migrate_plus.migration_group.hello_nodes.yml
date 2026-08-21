@@ -1,0 +1,19 @@
+uuid: 9d1ba312-0fdb-4cbb-83de-8b3b1f11bc20
+langcode: en
+status: true
+dependencies: {  }
+id: hello_nodes
+label: 'Hello: Nodes'
+description: 'Imports data into nodes.'
+source_type: JSON
+module: null
+shared_configuration:
+  source:
+    track_changes: true
+  process:
+    status:
+      plugin: default_value
+      default_value: 1
+    uid:
+      plugin: default_value
+      default_value: 1

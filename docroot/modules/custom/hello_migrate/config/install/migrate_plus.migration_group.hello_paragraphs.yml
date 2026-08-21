@@ -1,0 +1,16 @@
+id: hello_paragraphs
+label: 'Hello: Paragraphs'
+description: Imports data into paragraph entities.
+source_type: JSON
+dependencies: {}
+shared_configuration:
+  source:
+    track_changes: true
+
+  process:
+    status:
+      plugin: default_value
+      default_value: 1
+    uid:
+      plugin: default_value
+      default_value: 1

@@ -1,0 +1,123 @@
+uuid: bbd00cbd-a88f-407a-a75d-7ccd1c980f77
+langcode: en
+status: true
+dependencies: {  }
+id: hello_qrk_entity_itinerary
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - hello
+  - hello_qrk
+  - hello_entity
+  - hello_itinerary
+migration_group: hello_entities
+label: 'Hello Entity: QRK: Itinerary'
+source:
+  plugin: dynamic_url
+  data_fetcher_plugin: http_archive
+  data_parser_plugin: json_single_item
+  index_url: 'https://www.quarkexpeditions.com/api/public/1/expedition'
+  detail_url: 'https://www.quarkexpeditions.com/api/public/1/expedition/{id}'
+  exclude_ids: {  }
+  artifact_directory: 'private://migration-artifacts/qrk/expedition'
+  parent_fields:
+    id: expedition_id
+  item_selector: itineraries
+  fields:
+    -
+      name: id
+      label: ID
+      selector: id
+    -
+      name: expedition_id
+      label: 'Expedition ID'
+      selector: expedition_id
+    -
+      name: title
+      label: 'Itinerary Title'
+      selector: title
+    -
+      name: season
+      label: Season
+      selector: season
+    -
+      name: duration_days
+      label: 'Duration Days'
+      selector: duration_days
+    -
+      name: start_location
+      label: 'Start Location'
+      selector: start_location
+    -
+      name: end_location
+      label: 'End Location'
+      selector: end_location
+    -
+      name: embarkation_port_code
+      label: 'Embarkation Port Code'
+      selector: embarkation_port_code
+    -
+      name: disembarkation_port_code
+      label: 'Disembarkation Port Code'
+      selector: disembarkation_port_code
+    -
+      name: itinerary_days
+      label: 'Itinerary Days'
+      selector: days
+  ids:
+    id:
+      type: string
+process:
+  label: title
+  field_parent_expedition:
+    plugin: migration_lookup
+    migration: hello_qrk_node_expedition
+    source: expedition_id
+    no_stub: true
+  field_operator/target_id:
+    plugin: default_value
+    default_value: 15
+  field_season: season
+  field_duration: duration_days
+  field_start_location_text: start_location
+  field_end_location_text: end_location
+  field_itinerary_days:
+    plugin: sub_process
+    source: itinerary_days
+    include_source: true
+    source_key: parent
+    process:
+      target_id:
+        plugin: migration_lookup
+        migration: hello_qrk_entity_itinerary_day
+        source:
+          - parent/id
+          - day_start_number
+        no_stub: true
+  field_embarkation_port:
+    plugin: entity_lookup
+    source: embarkation_port_code
+    entity_type: taxonomy_term
+    value_key: field_port_code
+    bundle_key: vid
+    bundle: ports
+    ignore_case: true
+  field_disembarkation_port:
+    plugin: entity_lookup
+    source: disembarkation_port_code
+    entity_type: taxonomy_term
+    value_key: field_port_code
+    bundle_key: vid
+    bundle: ports
+    ignore_case: true
+destination:
+  plugin: 'entity:hello_entity'
+  default_bundle: itinerary
+idMap: {  }
+migration_dependencies:
+  required:
+    - hello_qrk_node_expedition
+    - hello_qrk_entity_itinerary_day
+  optional: {  }
+include: null

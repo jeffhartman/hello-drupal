@@ -1,0 +1,89 @@
+uuid: 527325d9-fdbc-4fd2-a050-1838ecadcb13
+langcode: en
+status: true
+dependencies: {  }
+id: hello_qrk_file_expedition_hero_image
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - hello
+  - hello_qrk
+  - hello_file
+  - hello_image
+  - hello_hero_image
+  - hello_expedition
+migration_group: hello_files
+label: 'Hello File: QRK : Expedition Hero Image'
+source:
+  plugin: dynamic_url
+  data_fetcher_plugin: http_archive
+  data_parser_plugin: json_single_item
+  index_url: 'https://www.quarkexpeditions.com/api/public/1/expedition'
+  detail_url: 'https://www.quarkexpeditions.com/api/public/1/expedition/{id}'
+  exclude_ids: {  }
+  artifact_directory: 'private://migration-artifacts/qrk/expedition'
+  parent_fields:
+    id: expedition_id
+  item_selector: hero_image
+  constants:
+    destination_directory: 'public://images/hero/'
+  fields:
+    -
+      name: expedition_id
+      label: 'Expedition ID'
+      selector: expedition_id
+    -
+      name: source_url
+      label: 'Source URL'
+      selector: fullsize_url
+    -
+      name: title
+      label: Title
+      selector: title
+    -
+      name: alt
+      label: 'Alt text'
+      selector: alt
+    -
+      name: width
+      label: Width
+      selector: dimensions/width
+    -
+      name: height
+      label: Height
+      selector: dimensions/height
+  ids:
+    source_url:
+      type: string
+process:
+  _filename_raw:
+    plugin: callback
+    callable: basename
+    source: source_url
+  _filename:
+    plugin: machine_name
+    source: '@_filename_raw'
+    replace_pattern: '/[^a-z0-9_.-]+/'
+  _destination_uri:
+    plugin: concat
+    source:
+      - constants/destination_directory
+      - '@_filename'
+    delimiter: ''
+  uri:
+    plugin: download
+    source:
+      - source_url
+      - '@_destination_uri'
+  filename: '@_filename'
+  status:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity:file'
+idMap: {  }
+migration_dependencies:
+  required: {  }
+  optional: {  }
+include: null

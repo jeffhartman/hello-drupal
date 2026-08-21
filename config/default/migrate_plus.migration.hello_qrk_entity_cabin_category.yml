@@ -1,0 +1,121 @@
+uuid: 94bb17f5-5a01-44ca-b86d-32563f278ab5
+langcode: en
+status: true
+dependencies: {  }
+id: hello_qrk_entity_cabin_category
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - hello
+  - hello_qrk
+  - hello_entity
+  - hello_cabin_category
+migration_group: hello_entities
+label: 'Hello Entity: QRK: Cabin Category'
+source:
+  plugin: dynamic_url
+  data_fetcher_plugin: http_archive
+  data_parser_plugin: json_single_item
+  index_url: 'https://www.quarkexpeditions.com/api/public/1/cabin-category'
+  detail_url: 'https://www.quarkexpeditions.com/api/public/1/cabin-category/{id}'
+  exclude_ids: {  }
+  artifact_directory: 'private://migration-artifacts/qrk/cabin-category'
+  item_selector: ''
+  fields:
+    -
+      name: id
+      label: ID
+      selector: id
+    -
+      name: cabin_category_id
+      label: 'Cabin Category ID'
+      selector: cabin_id
+    -
+      name: cabin_category_name
+      label: 'Cabin Category Name'
+      selector: cabin_name
+    -
+      name: body
+      label: Description
+      selector: description
+    -
+      name: ship_id
+      label: 'Ship ID'
+      selector: ship_id
+    -
+      name: ship_name
+      label: 'Ship Name'
+      selector: ship_name
+    -
+      name: image
+      label: Image
+      selector: image
+  ids:
+    id:
+      type: string
+process:
+  id:
+    plugin: entity_lookup
+    source: cabin_category_id
+    entity_type: hello_entity
+    value_key: field_cabin_category_id
+    bundle_key: bundle
+    bundle: cabin_category
+  label:
+    plugin: concat
+    source:
+      - ship_name
+      - cabin_category_name
+    delimiter: ' - '
+  field_display_title: cabin_category_name
+  field_cabin_category_id: cabin_category_id
+  field_ship:
+    plugin: entity_lookup
+    source: ship_id
+    entity_type: node
+    value_key: field_ship_id
+    bundle_key: type
+    bundle: ship
+  field_body/value:
+    -
+      plugin: str_replace
+      source: body
+      regex: true
+      search:
+        - '/&nbsp;/'
+        - "/\_/"
+        - '/  /'
+        - /\n/
+      replace:
+        - ' '
+        - ' '
+        - ' '
+        - ' '
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: callback
+      callable: html_entity_decode
+  field_body/format:
+    plugin: default_value
+    default_value: basic_html
+  field_cabin_category_images:
+    plugin: sub_process
+    source: image
+    process:
+      target_id:
+        plugin: migration_lookup
+        migration: hello_qrk_media_cabin_category_image
+        source: fullsize_url
+        no_stub: true
+destination:
+  plugin: 'entity:hello_entity'
+  default_bundle: cabin_category
+idMap: {  }
+migration_dependencies:
+  required: {  }
+  optional:
+    - hello_qrk_media_cabin_category_image
+include: null

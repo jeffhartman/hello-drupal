@@ -1,0 +1,20 @@
+uuid: b8269b55-0dcb-4d8d-be5e-31676a5ba9fb
+langcode: en
+status: true
+dependencies: {  }
+id: hello_media
+label: 'Hello: Media'
+description: 'Imports data into media entities.'
+source_type: JSON
+module: null
+shared_configuration:
+  source:
+    track_changes: true
+  process:
+    name: title
+    status:
+      plugin: default_value
+      default_value: 1
+    uid:
+      plugin: default_value
+      default_value: 1

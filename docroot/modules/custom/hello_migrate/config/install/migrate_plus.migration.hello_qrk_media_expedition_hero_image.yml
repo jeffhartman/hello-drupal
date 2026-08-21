@@ -1,0 +1,71 @@
+id: hello_qrk_media_expedition_hero_image
+label: 'Hello Media: QRK : Expedition Hero Image'
+
+source:
+  plugin: dynamic_url
+  data_fetcher_plugin: http_archive
+  data_parser_plugin: json_single_item
+  index_url: https://www.quarkexpeditions.com/api/public/1/expedition
+  detail_url: https://www.quarkexpeditions.com/api/public/1/expedition/{id}
+  exclude_ids: []
+  artifact_directory: 'private://migration-artifacts/qrk/expedition'
+
+  parent_fields:
+    id: expedition_id
+
+  item_selector: hero_image
+
+  fields:
+    -
+      name: expedition_id
+      label: 'Expedition ID'
+      selector: expedition_id
+    -
+      name: source_url
+      label: 'Source URL'
+      selector: fullsize_url
+    -
+      name: title
+      label: 'Title'
+      selector: title
+    -
+      name: alt
+      label: 'Alt text'
+      selector: alt
+
+  ids:
+    source_url:
+      type: string
+
+destination:
+  plugin: entity:media
+  default_bundle: image
+
+process:
+  name: title
+
+  field_media_image/target_id:
+    plugin: migration_lookup
+    migration: hello_qrk_file_expedition_hero_image
+    source: source_url
+    no_stub: true
+
+  field_media_image/alt: alt
+  field_media_image/title: title
+
+  status:
+    plugin: default_value
+    default_value: 1
+
+migration_dependencies:
+  required: []
+  optional:
+    - hello_qrk_file_expedition_hero_image
+migration_tags:
+  - hello
+  - hello_qrk
+  - hello_media
+  - hello_media_image
+  - hello_media_hero_image
+  - hello_expedition
+migration_group: hello_media

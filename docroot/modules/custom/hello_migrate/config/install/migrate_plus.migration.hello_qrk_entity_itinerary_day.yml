@@ -1,0 +1,94 @@
+id: hello_qrk_entity_itinerary_day
+label: 'Hello Entity: QRK : Itinerary Day'
+
+source:
+  plugin: dynamic_url
+  data_fetcher_plugin: http_archive
+  data_parser_plugin: json_itinerary_days
+  index_url: https://www.quarkexpeditions.com/api/public/1/expedition
+  detail_url: https://www.quarkexpeditions.com/api/public/1/expedition/{id}
+  exclude_ids: []
+  artifact_directory: 'private://migration-artifacts/qrk/expedition'
+
+  fields:
+    -
+      name: itinerary_id
+      label: 'Itinerary ID'
+      selector: itinerary_id
+    -
+      name: package_code
+      label: 'Package Code'
+      selector: package_code
+    -
+      name: title
+      label: 'Title'
+      selector: title
+    -
+      name: location
+      label: 'Location'
+      selector: location
+    -
+      name: description
+      label: 'Description'
+      selector: description
+    -
+      name: port_code
+      label: 'Port Code'
+      selector: port_code
+    -
+      name: day_number
+      label: 'Day Number'
+      selector: day_number
+    -
+      name: day_start_number
+      label: 'Day Start Number'
+      selector: day_start_number
+    -
+      name: day_end_number
+      label: 'Day End Number'
+      selector: day_end_number
+
+  ids:
+    itinerary_id:
+      type: integer
+    day_start_number:
+      type: integer
+
+destination:
+  plugin: entity:hello_entity
+  default_bundle: itinerary_day
+
+process:
+  label:
+    plugin: concat
+    source:
+      - package_code
+      - day_number
+    delimiter: ': '
+  field_itin_day_title: title
+  field_itin_day_day_number_range/from: day_start_number
+  field_itin_day_day_number_range/to: day_end_number
+  field_itin_day_location: location
+  description/value: description
+  description/format:
+    plugin: default_value
+    default_value: basic_html
+  field_itin_day_port:
+    plugin: entity_lookup
+    source: port_code
+    entity_type: taxonomy_term
+    value_key: field_port_code
+    bundle_key: vid
+    bundle: ports
+    ignore_case: true
+
+migration_dependencies:
+  required: []
+  optional: []
+migration_tags:
+  - hello
+  - hello_qrk
+  - hello_entity
+  - hello_itinerary
+  - hello_itinerary_day
+migration_group: hello_entities

@@ -1,0 +1,16 @@
+id: hello_media
+label: 'Hello: Media'
+description: Imports data into media entities.
+source_type: JSON
+dependencies: {}
+shared_configuration:
+  source:
+    track_changes: true
+  process:
+    name: title
+    status:
+      plugin: default_value
+      default_value: 1
+    uid:
+      plugin: default_value
+      default_value: 1

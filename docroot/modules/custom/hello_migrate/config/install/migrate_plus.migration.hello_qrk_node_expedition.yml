@@ -1,0 +1,157 @@
+id: hello_qrk_node_expedition
+label: 'Hello Node: QRK : Expedition'
+
+source:
+  plugin: dynamic_url
+  data_fetcher_plugin: http_archive
+  data_parser_plugin: json_single_item
+  index_url: https://www.quarkexpeditions.com/api/public/1/expedition
+  detail_url: https://www.quarkexpeditions.com/api/public/1/expedition/{id}
+  exclude_ids: []
+  artifact_directory: 'private://migration-artifacts/qrk/expedition'
+
+  item_selector: ''
+
+  fields:
+    -
+      name: id
+      label: 'ID'
+      selector: id
+    -
+      name: title
+      label: 'Expedition Title'
+      selector: expedition_name
+    -
+      name: body
+      label: 'Body'
+      selector: description
+    -
+      name: region_id
+      label: 'Region ID'
+      selector: region_id
+    -
+      name: region
+      label: 'Region'
+      selector: region
+    -
+      name: destinations
+      label: 'Destinations'
+      selector: destinations
+    -
+      name: highlights
+      label: 'Highlights'
+      selector: highlights
+    -
+      name: hero_image_url
+      label: 'Hero Image URL'
+      selector: hero_image/fullsize_url
+    -
+      name: images
+      label: 'Images'
+      selector: images
+    -
+      name: itineraries
+      label: 'Itineraries'
+      selector: itineraries
+
+  ids:
+    id:
+      type: string
+
+destination:
+  plugin: entity:node
+  default_bundle: expedition
+
+process:
+  title: title
+  field_operator/target_id:
+    plugin: default_value
+    default_value: 15
+  field_body/value:
+    -
+      plugin: str_replace
+      source: body
+      regex: true
+      search:
+        - '/&nbsp;/'
+        - '/ /'
+        - '/  /'
+        - '/\n/'
+      replace:
+        - ' '
+        - ' '
+        - ' '
+        - ' '
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: callback
+      callable: html_entity_decode
+  field_body/format:
+    plugin: default_value
+    default_value: basic_html
+
+  _hero_banner_lookup:
+    plugin: migration_lookup
+    migration: hello_qrk_paragraph_expedition_hero_banner
+    source:
+      - id
+      - hero_image_url
+    no_stub: true
+
+  field_hero_banner:
+    plugin: sub_process
+    source:
+      - '@_hero_banner_lookup'
+    process:
+      target_id: '0'
+      target_revision_id: '1'
+
+  field_expedition_images:
+    plugin: sub_process
+    source: images
+    process:
+      target_id:
+        plugin: migration_lookup
+        migration: hello_qrk_media_expedition_image
+        source: fullsize_url
+        no_stub: true
+
+  field_itineraries:
+    plugin: sub_process
+    source: itineraries
+    process:
+      target_id:
+        plugin: migration_lookup
+        migration: hello_qrk_entity_itinerary
+        source: id
+        no_stub: true
+
+  field_primary_destination:
+    plugin: entity_lookup
+    source: region
+    entity_type: taxonomy_term
+    value_key: name
+    bundle_key: vid
+    bundle: destinations
+    ignore_case: true
+
+  field_destinations:
+    plugin: entity_lookup
+    source: destinations
+    entity_type: taxonomy_term
+    value_key: name
+    bundle_key: vid
+    bundle: destinations
+    ignore_case: true
+
+migration_dependencies:
+  required: []
+  optional: []
+migration_tags:
+  - hello
+  - hello_qrk
+  - hello_node
+  - hello_expedition
+migration_group: hello_nodes

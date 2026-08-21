@@ -1,0 +1,98 @@
+id: hello_qrk_file_ship_image
+label: 'Hello File: QRK : Ship Image'
+
+source:
+  plugin: dynamic_url
+  data_fetcher_plugin: http_archive
+  data_parser_plugin: json_single_item
+  index_url: https://www.quarkexpeditions.com/api/public/1/ship
+  detail_url: https://www.quarkexpeditions.com/api/public/1/ship/{id}
+  exclude_ids:
+    - 11006
+  artifact_directory: 'private://migration-artifacts/qrk/ship'
+
+  parent_fields:
+    id: ship_nid
+
+  item_selector: images
+
+  constants:
+    destination_directory: 'public://images/ship/'
+
+  fields:
+    -
+      name: ship_nid
+      label: 'Ship Node ID'
+      selector: id
+    -
+      name: source_url
+      label: 'Source URL'
+      selector: fullsize_url
+    -
+      name: title
+      label: 'Title'
+      selector: title
+    -
+      name: alt
+      label: 'Alt text'
+      selector: alt
+    -
+      name: width
+      label: 'Width'
+      selector: dimensions/width
+    -
+      name: height
+      label: 'Height'
+      selector: dimensions/height
+    -
+      name: thumbnail_url
+      label: 'Thumbnail URL'
+      selector: thumbnail_url
+
+  ids:
+    source_url:
+      type: string
+
+destination:
+  plugin: entity:file
+
+process:
+  _filename_raw:
+    plugin: callback
+    callable: basename
+    source: source_url
+
+  _filename:
+    plugin: machine_name
+    source: '@_filename_raw'
+    replace_pattern: '/[^a-z0-9_.-]+/'
+
+  _destination_uri:
+    plugin: concat
+    source:
+      - constants/destination_directory
+      - '@_filename'
+    delimiter: ''
+
+  uri:
+    plugin: download
+    source:
+      - source_url
+      - '@_destination_uri'
+
+  filename: '@_filename'
+
+  status:
+    plugin: default_value
+    default_value: 1
+
+migration_dependencies:
+  required: []
+  optional: []
+migration_tags:
+  - hello
+  - hello_qrk
+  - hello_file
+  - hello_image
+  - hello_ship
+migration_group: hello_files

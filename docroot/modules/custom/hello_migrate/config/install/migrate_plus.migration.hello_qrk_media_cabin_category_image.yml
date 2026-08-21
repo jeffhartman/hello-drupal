@@ -1,0 +1,70 @@
+id: hello_qrk_media_cabin_category_image
+label: 'Hello Media: QRK : Cabin Category Image'
+
+source:
+  plugin: dynamic_url
+  data_fetcher_plugin: http_archive
+  data_parser_plugin: json_single_item
+  index_url: https://www.quarkexpeditions.com/api/public/1/cabin-category
+  detail_url: https://www.quarkexpeditions.com/api/public/1/cabin-category/{id}
+  exclude_ids: []
+  artifact_directory: 'private://migration-artifacts/qrk/cabin-category'
+
+  parent_fields:
+    id: id
+
+  item_selector: image
+
+  fields:
+    -
+      name: id
+      label: 'Cabin Category Node ID'
+      selector: id
+    -
+      name: source_url
+      label: 'Source URL'
+      selector: fullsize_url
+    -
+      name: title
+      label: 'Title'
+      selector: title
+    -
+      name: alt
+      label: 'Alt text'
+      selector: alt
+
+  ids:
+    source_url:
+      type: string
+
+destination:
+  plugin: entity:media
+  default_bundle: image
+
+process:
+  name: title
+
+  field_media_image/target_id:
+    plugin: migration_lookup
+    migration: hello_qrk_file_cabin_category_image
+    source: source_url
+    no_stub: true
+
+  field_media_image/alt: alt
+  field_media_image/title: title
+
+  status:
+    plugin: default_value
+    default_value: 1
+
+migration_dependencies:
+  required: []
+  optional:
+    - hello_qrk_file_cabin_category_image
+migration_tags:
+  - hello
+  - hello_qrk
+  - hello_media
+  - hello_media_image
+  - hello_cabin_category
+migration_group: hello_media

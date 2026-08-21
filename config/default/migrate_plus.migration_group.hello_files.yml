@@ -1,0 +1,20 @@
+uuid: 884f323b-3c69-4e89-910e-fd943da57885
+langcode: en
+status: true
+dependencies: {  }
+id: hello_files
+label: 'Hello: Files'
+description: 'Imports data into file entities.'
+source_type: JSON
+module: null
+shared_configuration:
+  source:
+    track_changes: true
+  process:
+    name: title
+    status:
+      plugin: default_value
+      default_value: 1
+    uid:
+      plugin: default_value
+      default_value: 1

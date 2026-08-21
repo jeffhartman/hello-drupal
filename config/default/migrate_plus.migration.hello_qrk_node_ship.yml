@@ -1,0 +1,132 @@
+uuid: 07c34184-a39f-4234-b543-fe2af897c361
+langcode: en
+status: true
+dependencies: {  }
+id: hello_qrk_node_ship
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - hello
+  - hello_qrk
+  - hello_node
+  - hello_ship
+migration_group: hello_nodes
+label: 'Hello Node: QRK : Ship'
+source:
+  plugin: dynamic_url
+  data_fetcher_plugin: http_archive
+  data_parser_plugin: json_single_item
+  index_url: 'https://www.quarkexpeditions.com/api/public/1/ship'
+  detail_url: 'https://www.quarkexpeditions.com/api/public/1/ship/{id}'
+  exclude_ids:
+    - 11006
+  artifact_directory: 'private://migration-artifacts/qrk/ship'
+  item_selector: ''
+  fields:
+    -
+      name: id
+      label: ID
+      selector: id
+    -
+      name: title
+      label: 'Ship Name'
+      selector: ship_name
+    -
+      name: body
+      label: Body
+      selector: description
+    -
+      name: ship_id
+      label: 'Ship ID'
+      selector: ship_id
+    -
+      name: cabin_amenities
+      label: 'Cabin Amenities'
+      selector: amenities/cabin
+    -
+      name: aboard_amenities
+      label: 'Aboard Amenities'
+      selector: amenities/aboard
+    -
+      name: activities
+      label: Activities
+      selector: amenities/activities
+    -
+      name: hero_image_url
+      label: 'Hero Image URL'
+      selector: hero_image/fullsize_url
+    -
+      name: images
+      label: Images
+      selector: images
+  ids:
+    id:
+      type: string
+process:
+  nid:
+    plugin: entity_lookup
+    source: ship_id
+    entity_type: node
+    value_key: field_ship_id
+    bundle_key: type
+    bundle: ship
+  title: title
+  field_operator/target_id:
+    plugin: default_value
+    default_value: 15
+  field_body/value:
+    -
+      plugin: str_replace
+      source: body
+      regex: true
+      search:
+        - '/&nbsp;/'
+        - "/\_/"
+        - '/  /'
+        - /\n/
+      replace:
+        - ' '
+        - ' '
+        - ' '
+        - ' '
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: callback
+      callable: html_entity_decode
+  field_body/format:
+    plugin: default_value
+    default_value: basic_html
+  _hero_banner_lookup:
+    plugin: migration_lookup
+    migration: hello_qrk_paragraph_ship_hero_banner
+    source:
+      - id
+      - hero_image_url
+    no_stub: true
+  field_hero_banner:
+    plugin: sub_process
+    source:
+      - '@_hero_banner_lookup'
+    process:
+      target_id: '0'
+      target_revision_id: '1'
+  field_ship_images:
+    plugin: sub_process
+    source: images
+    process:
+      target_id:
+        plugin: migration_lookup
+        migration: hello_qrk_media_ship_image
+        source: fullsize_url
+        no_stub: true
+destination:
+  plugin: 'entity:node'
+  default_bundle: ship
+idMap: {  }
+migration_dependencies:
+  required: {  }
+  optional: {  }
+include: null
