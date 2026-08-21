@@ -49,6 +49,7 @@ module:
   gin_toolbar: 0
   google_tag: 0
   hello_algolia: 0
+  hello_api: 0
   hello_core: 0
   hello_entity: 0
   hello_migrate: 0

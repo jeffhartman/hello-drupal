@@ -1,0 +1,5 @@
+name: 'hello_api'
+type: module
+description: 'Endpoints for returning expedition, ship, cabin, and departure content.'
+package: HELLO
+core_version_requirement: ^10 || ^11
