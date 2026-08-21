@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - filter.format.restricted_html
+    - rest.resource.expedition_index
   module:
     - commerce_product
     - filter
     - media
+    - rest
     - system
 _core:
   default_config_hash: Tus1ZTNXKIOnrennR1hnTbc7wUPBXHTUm5UdCpEhJSk
@@ -17,6 +19,7 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
+  - 'restful get expedition_index'
   - 'use text format restricted_html'
   - 'view commerce_product'
   - 'view media'
