@@ -1,0 +1,20 @@
+uuid: fa61c717-2918-4c75-9985-f1dcdeb64ffe
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_entity
+    - media
+id: hello_entity.field_images
+field_name: field_images
+entity_type: hello_entity
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
