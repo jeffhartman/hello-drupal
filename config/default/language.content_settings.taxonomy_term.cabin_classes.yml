@@ -1,0 +1,16 @@
+uuid: 3a195fe4-df4a-4307-9e04-38696568d42b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cabin_classes
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.cabin_classes
+target_entity_type_id: taxonomy_term
+target_bundle: cabin_classes
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,14 @@
+uuid: 27d7d3c6-3763-41f2-a1f7-616f0e085c2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cabin_classes
+id: taxonomy_vocabulary_cabin_classes
+entity_type_id: taxonomy_vocabulary
+entity_id: cabin_classes
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied
