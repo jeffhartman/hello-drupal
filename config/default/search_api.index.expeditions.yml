@@ -1,0 +1,109 @@
+uuid: 3fed9a42-aa60-4625-a289-d079543e74ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body
+    - field.storage.node.field_destinations
+    - field.storage.node.field_primary_destination
+    - field.storage.taxonomy_term.field_destination_id
+    - search_api.server.algolia
+  module:
+    - node
+    - taxonomy
+id: expeditions
+name: Expeditions
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: 'Body » Processed text'
+    datasource_id: 'entity:node'
+    property_path: 'field_body:processed'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_body
+  destinations:
+    label: 'Destinations » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_destinations:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_destinations
+      module:
+        - taxonomy
+  entity_id:
+    label: 'Node ID'
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  region:
+    label: 'Region » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_primary_destination:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_primary_destination
+      module:
+        - taxonomy
+  region_id:
+    label: 'Region » Taxonomy term » Destination ID'
+    datasource_id: 'entity:node'
+    property_path: 'field_primary_destination:entity:field_destination_id'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_primary_destination
+        - field.storage.taxonomy_term.field_destination_id
+      module:
+        - taxonomy
+  summary_processed:
+    label: 'Body » Processed summary'
+    datasource_id: 'entity:node'
+    property_path: 'field_body:summary_processed'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_body
+  url:
+    label: URI
+    property_path: search_api_url
+    type: string
+    configuration:
+      absolute: false
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - expedition
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  delete_on_fail: true
+  index_directly: true
+  track_changes_in_references: true
+  algolia_index_name: expeditions
+  algolia_index_batch_deletion: '0'
+  object_id_field: ''
+  partially_update_objects: 0
+  algolia_index_list: ''
+server: algolia
