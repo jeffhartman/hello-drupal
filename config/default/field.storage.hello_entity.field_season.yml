@@ -1,0 +1,19 @@
+uuid: dc462a64-af4f-4976-b7a9-aed9c9d06388
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_entity
+    - yearonly
+id: hello_entity.field_season
+field_name: field_season
+entity_type: hello_entity
+type: yearonly
+settings: {  }
+module: yearonly
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

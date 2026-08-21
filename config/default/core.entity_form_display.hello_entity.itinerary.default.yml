@@ -1,0 +1,262 @@
+uuid: 204bd70e-8402-4dd2-a186-7911bdf92537
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.hello_entity.itinerary.field_body
+    - field.field.hello_entity.itinerary.field_disembarkation_port
+    - field.field.hello_entity.itinerary.field_duration
+    - field.field.hello_entity.itinerary.field_embarkation_port
+    - field.field.hello_entity.itinerary.field_end_location
+    - field.field.hello_entity.itinerary.field_end_location_text
+    - field.field.hello_entity.itinerary.field_itinerary_days
+    - field.field.hello_entity.itinerary.field_itinerary_id
+    - field.field.hello_entity.itinerary.field_parent_expedition
+    - field.field.hello_entity.itinerary.field_season
+    - field.field.hello_entity.itinerary.field_start_location
+    - field.field.hello_entity.itinerary.field_start_location_text
+    - hello_entity.hello_entity_type.itinerary
+  module:
+    - address
+    - field_group
+    - text
+    - yearonly
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_description
+        - group_summary_information
+        - group_itinerary_days
+        - group_inclusions_exclusions
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        direction: vertical
+        width_breakpoint: 640
+    group_description:
+      children:
+        - field_body
+        - description
+      label: Description
+      region: content
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_summary_information:
+      children:
+        - field_itinerary_id
+        - field_parent_expedition
+        - field_season
+        - field_duration
+        - field_start_location
+        - field_start_location_text
+        - field_end_location
+        - field_end_location_text
+        - field_embarkation_port
+        - field_disembarkation_port
+      label: 'Summary Information'
+      region: content
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_itinerary_days:
+      children:
+        - field_itinerary_days
+      label: 'Itinerary Days'
+      region: content
+      parent_name: group_tabs
+      weight: 22
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_inclusions_exclusions:
+      children: {  }
+      label: 'Inclusions / Exclusions'
+      region: content
+      parent_name: group_tabs
+      weight: 23
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+id: hello_entity.itinerary.default
+targetEntityType: hello_entity
+bundle: itinerary
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_body:
+    type: text_textarea_with_summary
+    weight: 0
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_disembarkation_port:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_duration:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_embarkation_port:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_end_location:
+    type: address_default
+    weight: 8
+    region: content
+    settings:
+      wrapper_type: fieldset
+    third_party_settings: {  }
+  field_end_location_text:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_itinerary_days:
+    type: entity_reference_autocomplete
+    weight: 11
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_itinerary_id:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_parent_expedition:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_season:
+    type: yearonly_default
+    weight: 4
+    region: content
+    settings:
+      sort_order: asc
+    third_party_settings: {  }
+  field_start_location:
+    type: address_default
+    weight: 6
+    region: content
+    settings:
+      wrapper_type: fieldset
+    third_party_settings: {  }
+  field_start_location_text:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 13
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: false
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 14
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

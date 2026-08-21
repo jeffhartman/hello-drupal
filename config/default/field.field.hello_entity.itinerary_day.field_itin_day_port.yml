@@ -1,0 +1,29 @@
+uuid: 83e2ceff-ffe1-4547-949d-0961d035d35f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_itin_day_port
+    - hello_entity.hello_entity_type.itinerary_day
+    - taxonomy.vocabulary.ports
+id: hello_entity.itinerary_day.field_itin_day_port
+field_name: field_itin_day_port
+entity_type: hello_entity
+bundle: itinerary_day
+label: Port
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      ports: ports
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

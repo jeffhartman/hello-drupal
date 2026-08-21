@@ -1,0 +1,20 @@
+uuid: 6db49e87-127f-4ce4-a158-791d357a196b
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_entity
+    - taxonomy
+id: hello_entity.field_itin_day_port
+field_name: field_itin_day_port
+entity_type: hello_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

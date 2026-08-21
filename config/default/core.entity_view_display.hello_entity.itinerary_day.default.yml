@@ -1,0 +1,67 @@
+uuid: f085c2b3-24a2-41f4-a086-66bfe4bb28f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.hello_entity.itinerary_day.field_itin_day_day_number_range
+    - field.field.hello_entity.itinerary_day.field_itin_day_image
+    - field.field.hello_entity.itinerary_day.field_itin_day_location
+    - field.field.hello_entity.itinerary_day.field_itin_day_port
+    - field.field.hello_entity.itinerary_day.field_itin_day_title
+    - hello_entity.hello_entity_type.itinerary_day
+  module:
+    - range
+    - text
+id: hello_entity.itinerary_day.default
+targetEntityType: hello_entity
+bundle: itinerary_day
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_itin_day_day_number_range:
+    type: range_integer
+    label: hidden
+    settings:
+      range_separator: '-'
+      thousand_separator: ''
+      range_combine: true
+      field_prefix_suffix: false
+      from_prefix_suffix: false
+      to_prefix_suffix: false
+      combined_prefix_suffix: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_itin_day_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_itin_day_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  field_itin_day_location: true
+  field_itin_day_port: true
+  label: true
+  langcode: true
+  search_api_excerpt: true
+  status: true
+  uid: true

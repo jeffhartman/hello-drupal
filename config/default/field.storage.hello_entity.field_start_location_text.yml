@@ -1,0 +1,21 @@
+uuid: ed9e6f2a-ef0f-4448-a6e0-22c531c60687
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_entity
+id: hello_entity.field_start_location_text
+field_name: field_start_location_text
+entity_type: hello_entity
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

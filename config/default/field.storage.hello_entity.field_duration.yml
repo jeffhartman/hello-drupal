@@ -1,0 +1,20 @@
+uuid: 15c26d82-b3a5-475f-b692-f431f60cba93
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_entity
+id: hello_entity.field_duration
+field_name: field_duration
+entity_type: hello_entity
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

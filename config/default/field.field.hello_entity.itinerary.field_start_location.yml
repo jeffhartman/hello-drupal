@@ -1,0 +1,47 @@
+uuid: 16111792-4a33-4ec1-af52-6d6b55fdf56d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_start_location
+    - hello_entity.hello_entity_type.itinerary
+  module:
+    - address
+id: hello_entity.itinerary.field_start_location
+field_name: field_start_location
+entity_type: hello_entity
+bundle: itinerary
+label: 'Start Location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+    addressLine1:
+      override: hidden
+    addressLine2:
+      override: hidden
+    addressLine3:
+      override: hidden
+    postalCode:
+      override: hidden
+    sortingCode:
+      override: hidden
+    dependentLocality:
+      override: hidden
+    administrativeArea:
+      override: optional
+  fields: {  }
+field_type: address

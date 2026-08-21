@@ -1,0 +1,23 @@
+uuid: 7f1d902a-802a-498a-b2e3-c3da341e66e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_duration
+    - hello_entity.hello_entity_type.itinerary
+id: hello_entity.itinerary.field_duration
+field_name: field_duration
+entity_type: hello_entity
+bundle: itinerary
+label: Duration
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

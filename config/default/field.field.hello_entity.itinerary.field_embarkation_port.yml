@@ -1,0 +1,29 @@
+uuid: 7c452eb8-390e-496b-8df0-df919d536bec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_embarkation_port
+    - hello_entity.hello_entity_type.itinerary
+    - taxonomy.vocabulary.ports
+id: hello_entity.itinerary.field_embarkation_port
+field_name: field_embarkation_port
+entity_type: hello_entity
+bundle: itinerary
+label: 'Embarkation Port'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      ports: ports
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,88 @@
+uuid: a4aceed8-6886-45e1-850d-01dfa915333b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.hello_entity.itinerary_day.field_itin_day_day_number_range
+    - field.field.hello_entity.itinerary_day.field_itin_day_image
+    - field.field.hello_entity.itinerary_day.field_itin_day_location
+    - field.field.hello_entity.itinerary_day.field_itin_day_port
+    - field.field.hello_entity.itinerary_day.field_itin_day_title
+    - hello_entity.hello_entity_type.itinerary_day
+  module:
+    - media_library
+    - range
+    - text
+id: hello_entity.itinerary_day.default
+targetEntityType: hello_entity
+bundle: itinerary_day
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_itin_day_day_number_range:
+    type: range
+    weight: 2
+    region: content
+    settings:
+      label:
+        from: From
+        to: to
+      placeholder:
+        from: ''
+        to: ''
+    third_party_settings: {  }
+  field_itin_day_image:
+    type: media_library_widget
+    weight: 6
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_itin_day_location:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_itin_day_port:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_itin_day_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  uid: true

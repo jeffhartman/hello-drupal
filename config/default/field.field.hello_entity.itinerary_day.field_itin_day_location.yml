@@ -1,0 +1,19 @@
+uuid: 8b28de6d-63dd-4fc6-8189-24873d652785
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_itin_day_location
+    - hello_entity.hello_entity_type.itinerary_day
+id: hello_entity.itinerary_day.field_itin_day_location
+field_name: field_itin_day_location
+entity_type: hello_entity
+bundle: itinerary_day
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

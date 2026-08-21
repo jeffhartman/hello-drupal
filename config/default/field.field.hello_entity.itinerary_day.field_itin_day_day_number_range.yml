@@ -1,0 +1,35 @@
+uuid: c3814de4-b0e7-49bb-a74a-45ef761b3892
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_itin_day_day_number_range
+    - hello_entity.hello_entity_type.itinerary_day
+  module:
+    - range
+id: hello_entity.itinerary_day.field_itin_day_day_number_range
+field_name: field_itin_day_day_number_range
+entity_type: hello_entity
+bundle: itinerary_day
+label: 'Start / End Day Numbers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  field:
+    prefix: ''
+    suffix: ''
+  from:
+    prefix: ''
+    suffix: ''
+  to:
+    prefix: ''
+    suffix: ''
+  combined:
+    prefix: ''
+    suffix: ''
+field_type: range_integer

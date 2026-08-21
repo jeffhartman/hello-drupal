@@ -1,0 +1,6 @@
+uuid: dc1edd24-e425-48ea-880c-9b5676dd1f95
+langcode: en
+status: true
+dependencies: {  }
+id: itinerary_day
+label: 'Itinerary Day'

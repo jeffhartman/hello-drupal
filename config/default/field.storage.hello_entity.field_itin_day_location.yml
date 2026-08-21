@@ -1,0 +1,21 @@
+uuid: 261e2d7d-5b40-4312-997e-52bab0711eba
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_entity
+id: hello_entity.field_itin_day_location
+field_name: field_itin_day_location
+entity_type: hello_entity
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: fc4459c6-1583-4482-86cc-3f01352019b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_season
+    - hello_entity.hello_entity_type.itinerary
+  module:
+    - yearonly
+id: hello_entity.itinerary.field_season
+field_name: field_season
+entity_type: hello_entity
+bundle: itinerary
+label: Season
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  yearonly_from: '2026'
+  yearonly_to: '+5 years'
+field_type: yearonly

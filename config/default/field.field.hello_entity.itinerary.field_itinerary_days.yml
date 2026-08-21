@@ -1,0 +1,29 @@
+uuid: b440a750-ed76-4edd-8495-1fe349d3b67e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_itinerary_days
+    - hello_entity.hello_entity_type.itinerary
+    - hello_entity.hello_entity_type.itinerary_day
+id: hello_entity.itinerary.field_itinerary_days
+field_name: field_itinerary_days
+entity_type: hello_entity
+bundle: itinerary
+label: 'Itinerary Days'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:hello_entity'
+  handler_settings:
+    target_bundles:
+      itinerary_day: itinerary_day
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

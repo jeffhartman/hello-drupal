@@ -1,0 +1,19 @@
+uuid: 087cf9d6-057f-47ea-ac06-08abab8d709a
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_entity
+    - text
+id: hello_entity.field_body
+field_name: field_body
+entity_type: hello_entity
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

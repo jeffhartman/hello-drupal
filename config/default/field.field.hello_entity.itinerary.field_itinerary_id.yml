@@ -1,0 +1,19 @@
+uuid: 5c898b2b-219b-4a20-943b-9ab44872589a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_itinerary_id
+    - hello_entity.hello_entity_type.itinerary
+id: hello_entity.itinerary.field_itinerary_id
+field_name: field_itinerary_id
+entity_type: hello_entity
+bundle: itinerary
+label: 'Itinerary ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

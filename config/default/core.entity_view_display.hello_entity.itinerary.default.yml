@@ -1,0 +1,179 @@
+uuid: 6ff63856-a53d-4acc-b840-634a22750563
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.hello_entity.itinerary.field_body
+    - field.field.hello_entity.itinerary.field_disembarkation_port
+    - field.field.hello_entity.itinerary.field_duration
+    - field.field.hello_entity.itinerary.field_embarkation_port
+    - field.field.hello_entity.itinerary.field_end_location
+    - field.field.hello_entity.itinerary.field_end_location_text
+    - field.field.hello_entity.itinerary.field_itinerary_days
+    - field.field.hello_entity.itinerary.field_itinerary_id
+    - field.field.hello_entity.itinerary.field_parent_expedition
+    - field.field.hello_entity.itinerary.field_season
+    - field.field.hello_entity.itinerary.field_start_location
+    - field.field.hello_entity.itinerary.field_start_location_text
+    - hello_entity.hello_entity_type.itinerary
+  module:
+    - address
+    - text
+    - user
+    - yearonly
+id: hello_entity.itinerary.default
+targetEntityType: hello_entity
+bundle: itinerary
+mode: default
+content:
+  created:
+    type: timestamp
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_disembarkation_port:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_duration:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_embarkation_port:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_end_location:
+    type: address_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_end_location_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  field_itinerary_days:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_itinerary_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_parent_expedition:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  field_season:
+    type: yearonly_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_start_location:
+    type: address_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_start_location_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  status:
+    type: boolean
+    label: above
+    settings:
+      format: enabled-disabled
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  uid:
+    type: author
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

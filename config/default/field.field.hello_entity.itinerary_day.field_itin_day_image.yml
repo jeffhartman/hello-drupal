@@ -1,0 +1,29 @@
+uuid: e1a14028-0987-41d3-9bce-9da9f77b7c6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_itin_day_image
+    - hello_entity.hello_entity_type.itinerary_day
+    - media.type.image
+id: hello_entity.itinerary_day.field_itin_day_image
+field_name: field_itin_day_image
+entity_type: hello_entity
+bundle: itinerary_day
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

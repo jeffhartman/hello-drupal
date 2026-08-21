@@ -1,0 +1,19 @@
+uuid: 619eb87b-98bf-4078-996f-07db0ac5e83b
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_entity
+id: hello_entity.field_itinerary_days
+field_name: field_itinerary_days
+entity_type: hello_entity
+type: entity_reference
+settings:
+  target_type: hello_entity
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
