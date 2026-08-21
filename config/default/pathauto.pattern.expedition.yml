@@ -1,0 +1,23 @@
+uuid: 694754b9-45f4-4678-9b6d-807546cb7151
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.expedition
+  module:
+    - node
+id: expedition
+label: Expedition
+type: 'canonical_entities:node'
+pattern: '/expeditions/[node:title]'
+selection_criteria:
+  53bf6e63-b361-4535-af13-ed3b4436436f:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      expedition: expedition
+selection_logic: and
+weight: -9
+relationships: {  }

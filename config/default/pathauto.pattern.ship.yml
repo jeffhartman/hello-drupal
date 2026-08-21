@@ -1,0 +1,23 @@
+uuid: 85304c59-18c3-4928-a9be-261514feac43
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ship
+  module:
+    - node
+id: ship
+label: Ship
+type: 'canonical_entities:node'
+pattern: '/ships/[node:title]'
+selection_criteria:
+  0ad47075-4e8f-48d6-8c38-73ebcf735ca3:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      ship: ship
+selection_logic: and
+weight: -8
+relationships: {  }

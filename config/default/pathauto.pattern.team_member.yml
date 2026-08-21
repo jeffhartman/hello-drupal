@@ -1,0 +1,23 @@
+uuid: 54be219b-f8c7-49da-98d0-bb320708aa2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.team_member
+  module:
+    - node
+id: team_member
+label: 'Team Member'
+type: 'canonical_entities:node'
+pattern: '/our-team/[node:title]'
+selection_criteria:
+  84293ce8-45fe-49b0-87f6-173f23c45b8d:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      team_member: team_member
+selection_logic: and
+weight: -7
+relationships: {  }

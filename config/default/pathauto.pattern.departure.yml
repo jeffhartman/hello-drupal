@@ -1,0 +1,23 @@
+uuid: 789f6e35-a38b-47cc-b116-5e02918d613f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.departure
+  module:
+    - node
+id: departure
+label: Departure
+type: 'canonical_entities:node'
+pattern: '/departure/[node:field_departure_id]'
+selection_criteria:
+  31429e72-8fa2-4ca7-8069-18adf0d70fd0:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      departure: departure
+selection_logic: and
+weight: -10
+relationships: {  }
