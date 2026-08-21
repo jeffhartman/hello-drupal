@@ -1,0 +1,37 @@
+{{ attach_library('hello_algolia/search') }}
+
+<div
+  class="algolia-search"
+  data-algolia-application-id="BOW17QJ0R5"
+  data-algolia-search-api-key="4ccd8e139f6ce39f3be0d07b403526f7"
+  data-algolia-index-name="ships"
+>
+  <div class="algolia-search__header">
+    <div id="algolia-searchbox"></div>
+    <div id="algolia-stats"></div>
+    <div id="algolia-sort"></div>
+  </div>
+
+  <div class="algolia-search__layout">
+    <aside class="algolia-search__facets">
+      <div id="algolia-clear-refinements"></div>
+
+        <div class="algolia-search__facet">
+          <h2 class="algolia-search__facet-heading">Operator</h2>
+          <div id="algolia-operator-name"></div>
+        </div>
+      {#
+      Add refinement containers here after configuring the corresponding
+      attributes as facets in Algolia.
+
+      <h2 class="algolia-search__facet-heading">Content type</h2>
+      <div id="algolia-content-type"></div>
+      #}
+    </aside>
+
+    <main class="algolia-search__results">
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination"></div>
+    </main>
+  </div>
+</div>

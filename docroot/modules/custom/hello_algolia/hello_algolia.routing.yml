@@ -1,0 +1,7 @@
+hello_algolia.search:
+  path: '/search'
+  defaults:
+    _title: 'Search'
+    _controller: '\Drupal\hello_algolia\Controller\AlgoliaSearchController::build'
+  requirements:
+    _permission: 'access content'

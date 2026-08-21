@@ -1,0 +1,87 @@
+.algolia-search {
+  max-width: 80rem;
+  margin-inline: auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.algolia-search__header {
+  margin-bottom: 2rem;
+}
+
+.algolia-search__header .ais-SearchBox {
+  margin-bottom: 0.75rem;
+}
+
+.algolia-search__layout {
+  display: grid;
+  grid-template-columns: minmax(12rem, 16rem) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.algolia-search__facets {
+  position: sticky;
+  top: 1rem;
+}
+
+.algolia-search__facet-heading {
+  margin: 2rem 0 0.75rem;
+  font-size: 1rem;
+}
+
+.algolia-search__results {
+  min-width: 0;
+}
+
+.algolia-hit {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.algolia-hit:first-child {
+  padding-top: 0;
+}
+
+.algolia-hit__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.375rem;
+  line-height: 1.3;
+}
+
+.algolia-hit__title a {
+  color: inherit;
+}
+
+.algolia-hit__summary {
+  line-height: 1.6;
+}
+
+.algolia-hit__metadata {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: #606060;
+}
+
+.algolia-search__empty {
+  padding: 2rem;
+  border: 1px solid #d9d9d9;
+  text-align: center;
+}
+
+#algolia-pagination {
+  margin-top: 2rem;
+}
+
+.ais-Pagination-list {
+  justify-content: center;
+}
+
+@media (max-width: 48rem) {
+  .algolia-search__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .algolia-search__facets {
+    position: static;
+  }
+}

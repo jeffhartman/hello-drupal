@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Provides Algolia InstantSearch integration.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function hello_algolia_theme(): array {
+  return [
+    'hello_algolia' => [
+      'variables' => [],
+      'template' => 'hello-algolia',
+    ],
+  ];
+}

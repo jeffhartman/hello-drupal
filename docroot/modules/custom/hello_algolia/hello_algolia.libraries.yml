@@ -1,0 +1,24 @@
+instantsearch:
+  css:
+    theme:
+      https://cdn.jsdelivr.net/npm/instantsearch.css@8/themes/satellite-min.css:
+        type: external
+        minified: true
+  js:
+    https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js:
+      type: external
+      minified: true
+    https://cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js:
+      type: external
+      minified: true
+
+search:
+  css:
+    component:
+      css/algolia-search.css: {}
+  js:
+    js/algolia-search.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+    - hello_algolia/instantsearch

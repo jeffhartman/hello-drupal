@@ -1,0 +1,5 @@
+name: 'Hello Algolia'
+type: module
+description: 'Integration with Algolia Search.'
+package: HELLO
+core_version_requirement: ^10 || ^11
