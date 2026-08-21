@@ -1,0 +1,16 @@
+uuid: b2ecc7ec-cbfe-427c-8fcc-915eef670649
+langcode: en
+status: true
+dependencies: {  }
+id: test
+label: Test
+description: 'Test / QA environment.'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/test
+module: {  }
+theme: {  }
+complete_list: {  }
+partial_list: {  }

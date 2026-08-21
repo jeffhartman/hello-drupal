@@ -1,0 +1,17 @@
+uuid: 2fb7c42f-ea83-4da0-a550-33a20e9e7285
+langcode: en
+status: true
+dependencies: {  }
+id: local
+label: Local
+description: 'Local DDEV, Lando, etc. environment.'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/local
+module:
+  dblog: 0
+theme: {  }
+complete_list: {  }
+partial_list: {  }

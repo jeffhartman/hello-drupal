@@ -1,0 +1,16 @@
+uuid: 199f3290-a215-4ead-a815-6c66a39b64cf
+langcode: en
+status: true
+dependencies: {  }
+id: dev
+label: Dev
+description: 'DEV environment.'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/dev
+module: {  }
+theme: {  }
+complete_list: {  }
+partial_list: {  }
