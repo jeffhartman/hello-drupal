@@ -1,0 +1,17 @@
+uuid: 516d0fd0-1540-4b38-be8a-3e01b7d3be66
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_api
+    - serialization
+    - user
+id: ship_detail
+plugin_id: ship_detail
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
