@@ -1,0 +1,6 @@
+uuid: fb4fe9fd-0e55-4a65-ae1f-bebba3285213
+langcode: en
+status: true
+dependencies: {  }
+id: ship_deck
+label: 'Ship Deck'

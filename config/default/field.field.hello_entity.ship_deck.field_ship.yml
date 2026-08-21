@@ -1,0 +1,29 @@
+uuid: 13fd461c-3922-42bc-a51d-8be57ccb55a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_ship
+    - hello_entity.hello_entity_type.ship_deck
+    - node.type.ship
+id: hello_entity.ship_deck.field_ship
+field_name: field_ship
+entity_type: hello_entity
+bundle: ship_deck
+label: Ship
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      ship: ship
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

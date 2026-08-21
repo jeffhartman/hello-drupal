@@ -1,0 +1,19 @@
+uuid: 4802a8e7-0782-4217-b1e9-a8105443976f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_display_title
+    - hello_entity.hello_entity_type.ship_deck
+id: hello_entity.ship_deck.field_display_title
+field_name: field_display_title
+entity_type: hello_entity
+bundle: ship_deck
+label: 'Display Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
