@@ -1,0 +1,149 @@
+uuid: 60c46018-a0e9-499b-9c6f-0c667ca87836
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_duration
+    - field.storage.hello_entity.field_parent_expedition
+    - field.storage.hello_entity.field_season
+    - field.storage.hello_entity.field_ship
+    - field.storage.node.field_departure_date
+    - field.storage.node.field_departure_id
+    - field.storage.node.field_itinerary
+    - field.storage.node.field_ship
+    - search_api.server.algolia
+  module:
+    - hello_entity
+    - node
+id: departures
+name: Departures
+description: ''
+read_only: false
+field_settings:
+  changed:
+    label: Changed
+    datasource_id: 'entity:node'
+    property_path: changed
+    type: date
+    dependencies:
+      module:
+        - node
+  created:
+    label: 'Authored on'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
+  entity_id:
+    label: 'Node ID'
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  expedition_name:
+    label: 'Itinerary » Hello Entity » Parent Expedition » Content » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_itinerary:entity:field_parent_expedition:entity:title'
+    type: string
+    dependencies:
+      config:
+        - field.storage.hello_entity.field_parent_expedition
+        - field.storage.node.field_itinerary
+      module:
+        - hello_entity
+        - node
+  field_departure_date:
+    label: 'Departure Date'
+    datasource_id: 'entity:node'
+    property_path: field_departure_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_departure_date
+  field_departure_id:
+    label: 'Departure ID'
+    datasource_id: 'entity:node'
+    property_path: field_departure_id
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_departure_id
+  field_duration:
+    label: 'Itinerary » Hello Entity » Duration'
+    datasource_id: 'entity:node'
+    property_path: 'field_itinerary:entity:field_duration'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.hello_entity.field_duration
+        - field.storage.node.field_itinerary
+      module:
+        - hello_entity
+  field_season:
+    label: 'Itinerary » Hello Entity » Season'
+    datasource_id: 'entity:node'
+    property_path: 'field_itinerary:entity:field_season'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.hello_entity.field_season
+        - field.storage.node.field_itinerary
+      module:
+        - hello_entity
+  field_ship:
+    label: 'Itinerary » Hello Entity » Ship'
+    datasource_id: 'entity:node'
+    property_path: 'field_itinerary:entity:field_ship'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.hello_entity.field_ship
+        - field.storage.node.field_itinerary
+      module:
+        - hello_entity
+  ship_name:
+    label: 'Ship » Content » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_ship:entity:title'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_ship
+      module:
+        - node
+  url:
+    label: URI
+    property_path: search_api_url
+    type: string
+    configuration:
+      absolute: false
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - departure
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  custom_value: {  }
+  entity_status: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  delete_on_fail: true
+  index_directly: true
+  track_changes_in_references: true
+server: algolia
