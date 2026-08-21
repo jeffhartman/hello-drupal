@@ -1,0 +1,29 @@
+uuid: e58e294f-bfa1-48cc-8183-198fece957d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ship_operators
+    - hello_entity.hello_entity_type.ship_operator
+    - node.type.ship
+id: node.ship.field_ship_operators
+field_name: field_ship_operators
+entity_type: node
+bundle: ship
+label: 'Ship Operators'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:hello_entity'
+  handler_settings:
+    target_bundles:
+      ship_operator: ship_operator
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

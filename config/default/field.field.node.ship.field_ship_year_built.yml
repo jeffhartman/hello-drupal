@@ -1,0 +1,23 @@
+uuid: dac93672-cd97-46fb-97c9-521ebfee2d0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ship_year_built
+    - node.type.ship
+  module:
+    - yearonly
+id: node.ship.field_ship_year_built
+field_name: field_ship_year_built
+entity_type: node
+bundle: ship
+label: 'Year Built'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  yearonly_from: '1970'
+  yearonly_to: now
+field_type: yearonly

@@ -1,0 +1,23 @@
+uuid: 4043f90a-c047-468c-b7f7-666e3c487273
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ship_length
+    - node.type.ship
+id: node.ship.field_ship_length
+field_name: field_ship_length
+entity_type: node
+bundle: ship
+label: 'Ship Length'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ' meters'
+field_type: decimal

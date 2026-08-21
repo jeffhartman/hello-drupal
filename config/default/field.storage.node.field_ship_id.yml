@@ -1,0 +1,21 @@
+uuid: 689f9583-d5b2-4c42-9e35-9bac9ec34c0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_ship_id
+field_name: field_ship_id
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

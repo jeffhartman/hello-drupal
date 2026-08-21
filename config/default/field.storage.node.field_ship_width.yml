@@ -1,0 +1,20 @@
+uuid: 6903a0e4-e199-41f5-a268-d4acb5e449ee
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_ship_width
+field_name: field_ship_width
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

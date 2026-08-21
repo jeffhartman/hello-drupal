@@ -1,0 +1,22 @@
+uuid: 22110023-f9eb-4c6e-88ac-f32cc31b81dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ship_flag
+    - node.type.ship
+  module:
+    - address
+id: node.ship.field_ship_flag
+field_name: field_ship_flag
+entity_type: node
+bundle: ship
+label: 'Ship Flag'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+field_type: address_country

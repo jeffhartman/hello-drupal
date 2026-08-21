@@ -1,0 +1,23 @@
+uuid: 408bff06-48f2-44f2-a315-25d4949351c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ship_width
+    - node.type.ship
+id: node.ship.field_ship_width
+field_name: field_ship_width
+entity_type: node
+bundle: ship
+label: 'Ship Width'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ' meters'
+field_type: decimal

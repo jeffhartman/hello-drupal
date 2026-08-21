@@ -1,0 +1,14 @@
+uuid: e85aa30e-e88e-4f42-84ee-8d858ee3197b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ship
+id: node_type_ship
+entity_type_id: node_type
+entity_id: ship
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

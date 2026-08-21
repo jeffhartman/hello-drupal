@@ -1,0 +1,166 @@
+uuid: 64220311-1e64-4489-8984-7decdd1d9a6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ship.field_body
+    - field.field.node.ship.field_hero_banner
+    - field.field.node.ship.field_imo_number
+    - field.field.node.ship.field_metatags
+    - field.field.node.ship.field_operator
+    - field.field.node.ship.field_ship_category
+    - field.field.node.ship.field_ship_decks
+    - field.field.node.ship.field_ship_flag
+    - field.field.node.ship.field_ship_id
+    - field.field.node.ship.field_ship_images
+    - field.field.node.ship.field_ship_length
+    - field.field.node.ship.field_ship_operators
+    - field.field.node.ship.field_ship_width
+    - field.field.node.ship.field_ship_year_built
+    - field.field.node.ship.field_ship_year_refurbished
+    - node.type.ship
+  module:
+    - address
+    - entity_reference_revisions
+    - metatag
+    - text
+    - user
+    - yearonly
+id: node.ship.default
+targetEntityType: node
+bundle: ship
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_hero_banner:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_imo_number:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_operator:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_ship_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_ship_decks:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_ship_flag:
+    type: address_country_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_ship_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_ship_images:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 116
+    region: content
+  field_ship_length:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_ship_operators:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_ship_width:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_ship_year_built:
+    type: yearonly_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_ship_year_refurbished:
+    type: yearonly_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

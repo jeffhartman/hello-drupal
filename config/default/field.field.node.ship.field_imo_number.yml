@@ -1,0 +1,23 @@
+uuid: e09125ad-90cf-46de-906f-0f1b75442677
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_imo_number
+    - node.type.ship
+id: node.ship.field_imo_number
+field_name: field_imo_number
+entity_type: node
+bundle: ship
+label: 'IMO Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

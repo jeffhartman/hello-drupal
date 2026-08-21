@@ -1,0 +1,20 @@
+uuid: 3767de5b-f190-48f8-af26-62467429fa14
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_entity
+    - node
+id: node.field_ship_decks
+field_name: field_ship_decks
+entity_type: node
+type: entity_reference
+settings:
+  target_type: hello_entity
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 602c8352-cedc-485a-9f23-ad67817d8339
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ship_id
+    - node.type.ship
+id: node.ship.field_ship_id
+field_name: field_ship_id
+entity_type: node
+bundle: ship
+label: 'Ship ID'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

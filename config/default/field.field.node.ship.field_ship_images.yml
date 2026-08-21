@@ -1,0 +1,29 @@
+uuid: 3f3ccfb3-9a9d-4f67-b61c-f627f6306d12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ship_images
+    - media.type.image
+    - node.type.ship
+id: node.ship.field_ship_images
+field_name: field_ship_images
+entity_type: node
+bundle: ship
+label: 'Ship Images'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

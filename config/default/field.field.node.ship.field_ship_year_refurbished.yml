@@ -1,0 +1,23 @@
+uuid: df512c1a-4436-467c-9690-fd91f7b67e71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ship_year_refurbished
+    - node.type.ship
+  module:
+    - yearonly
+id: node.ship.field_ship_year_refurbished
+field_name: field_ship_year_refurbished
+entity_type: node
+bundle: ship
+label: 'Year Refurbished'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  yearonly_from: '1970'
+  yearonly_to: '+2 years'
+field_type: yearonly

@@ -1,0 +1,11 @@
+uuid: 9013ea52-dc31-48cd-ae6f-877c95b1a834
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ship
+id: node.ship
+target_entity_type_id: node
+target_bundle: ship
+default_langcode: site_default
+language_alterable: false

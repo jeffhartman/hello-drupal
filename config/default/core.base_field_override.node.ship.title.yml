@@ -1,0 +1,18 @@
+uuid: e739fe22-dd4e-4568-bf67-21ef9fd24467
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ship
+id: node.ship.title
+field_name: title
+entity_type: node
+bundle: ship
+label: 'Ship Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
