@@ -1,0 +1,17 @@
+uuid: 27802a4d-5dd2-43ca-82cc-cf08ddff56d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_api
+    - serialization
+    - user
+id: primary_navigation
+plugin_id: primary_navigation
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
