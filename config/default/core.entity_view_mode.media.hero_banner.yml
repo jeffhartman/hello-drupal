@@ -1,0 +1,11 @@
+uuid: b37f52bd-93cd-48b8-9465-8d4a87863435
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.hero_banner
+label: 'Hero Banner'
+description: null
+targetEntityType: media
+cache: true

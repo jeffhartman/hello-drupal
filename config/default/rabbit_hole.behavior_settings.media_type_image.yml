@@ -1,0 +1,14 @@
+uuid: e00cbefe-ad9b-42c9-b486-81586f381c78
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+id: media_type_image
+entity_type_id: media_type
+entity_id: image
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied
