@@ -1,0 +1,17 @@
+uuid: e2eef8fd-2855-444e-9a76-bd3b5f570c7e
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_api
+    - serialization
+    - user
+id: expedition_index
+plugin_id: expedition_index
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

@@ -1,0 +1,9 @@
+services:
+  hello_api.hero_banner_data:
+    class: Drupal\hello_api\Service\HeroBannerDataService
+    arguments:
+      - '@file_url_generator'
+  hello_api.card_image_data:
+    class: Drupal\hello_api\Service\CardImageDataService
+    arguments:
+      - '@file_url_generator'
