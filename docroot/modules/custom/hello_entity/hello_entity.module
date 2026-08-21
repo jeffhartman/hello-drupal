@@ -1,0 +1,94 @@
+<?php
+
+declare(strict_types=1);
+
+/**
+ * @file
+ * Provides a Hello Entity entity type.
+ */
+
+use Drupal\Core\Render\Element;
+use Drupal\user\UserInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function hello_entity_theme(): array {
+  return [
+    'hello_entity' => ['render element' => 'elements'],
+  ];
+}
+
+/**
+ * Prepares variables for Hello Entity templates.
+ *
+ * Default template: hello-entity.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An associative array containing the Hello Entity information and any
+ *     fields attached to the entity.
+ *   - attributes: HTML attributes for the containing element.
+ */
+function template_preprocess_hello_entity(array &$variables): void {
+  $variables['view_mode'] = $variables['elements']['#view_mode'];
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
+  }
+}
+
+/**
+ * Implements hook_user_cancel().
+ */
+function hello_entity_user_cancel($edit, UserInterface $account, $method): void {
+  switch ($method) {
+    case 'user_cancel_block_unpublish':
+      // Unpublish hello entities.
+      $storage = \Drupal::entityTypeManager()->getStorage('hello_entity');
+      $hello_entity_ids = $storage->getQuery()
+        ->condition('uid', $account->id())
+        ->condition('status', 1)
+        ->accessCheck(FALSE)
+        ->execute();
+      foreach ($storage->loadMultiple($hello_entity_ids) as $hello_entity) {
+        $hello_entity->set('status', FALSE)->save();
+      }
+      break;
+
+    case 'user_cancel_reassign':
+      // Anonymize hello entities.
+      $storage = \Drupal::entityTypeManager()->getStorage('hello_entity');
+      $hello_entity_ids = $storage->getQuery()
+        ->condition('uid', $account->id())
+        ->accessCheck(FALSE)
+        ->execute();
+      foreach ($storage->loadMultiple($hello_entity_ids) as $hello_entity) {
+        $hello_entity->setOwnerId(0)->save();
+      }
+      break;
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_predelete() for user entities.
+ */
+function hello_entity_user_predelete(UserInterface $account): void {
+  // Delete hello entities that belong to this account.
+  $storage = \Drupal::entityTypeManager()->getStorage('hello_entity');
+  $hello_entity_ids = $storage->getQuery()
+    ->condition('uid', $account->id())
+    ->accessCheck(FALSE)
+    ->execute();
+  $storage->delete(
+    $storage->loadMultiple($hello_entity_ids)
+  );
+  // Delete old revisions.
+  $hello_entity_ids = $storage->getQuery()
+    ->allRevisions()
+    ->condition('uid', $account->id())
+    ->accessCheck(FALSE)
+    ->execute();
+  foreach (array_keys($hello_entity_ids) as $revision_id) {
+    $storage->deleteRevision($revision_id);
+  }
+}

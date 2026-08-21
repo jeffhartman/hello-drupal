@@ -1,0 +1,53 @@
+entity.hello_entity_type.collection:
+  title: 'Hello Entity types'
+  description: 'Manage and CRUD actions on Hello Entity type.'
+  parent: system.admin_structure
+  route_name: entity.hello_entity_type.collection
+
+entity.hello_entity.collection:
+  title: 'Hello Entities'
+  description: 'List of hello entities.'
+  route_name: entity.hello_entity.collection
+  parent: system.admin_content
+
+# Custom Hello entities.
+entity.hello_entity.add_hello_entity:
+  title: 'Add entity'
+  description: ''
+  route_name: entity.hello_entity.add_page
+  parent: entity.hello_entity.collection
+
+entity.hello_entity.add_cabin_entity:
+  title: 'Cabin'
+  description: 'Add a Cabin entity'
+  route_name: entity.hello_entity.add_form
+  route_parameters: {'hello_entity_type': 'cabin'}
+  parent: entity.hello_entity.add_hello_entity
+
+entity.hello_entity.add_cabin_category_entity:
+  title: 'Cabin Category'
+  description: 'Add a Cabin Category entity'
+  route_name: entity.hello_entity.add_form
+  route_parameters: {'hello_entity_type': 'cabin_category'}
+  parent: entity.hello_entity.add_hello_entity
+
+entity.hello_entity.add_itinerary_entity:
+  title: 'Itinerary'
+  description: 'Add a Itinerary entity'
+  route_name: entity.hello_entity.add_form
+  route_parameters: {'hello_entity_type': 'itinerary'}
+  parent: entity.hello_entity.add_hello_entity
+
+entity.hello_entity.add_itinerary_day_entity:
+  title: 'Itinerary Day'
+  description: 'Add a Itinerary Day entity'
+  route_name: entity.hello_entity.add_form
+  route_parameters: {'hello_entity_type': 'itinerary_day'}
+  parent: entity.hello_entity.add_hello_entity
+
+entity.hello_entity.add_ship_deck_entity:
+  title: 'Ship Deck'
+  description: 'Add a Ship Deck entity'
+  route_name: entity.hello_entity.add_form
+  route_parameters: {'hello_entity_type': 'ship_deck'}
+  parent: entity.hello_entity.add_hello_entity

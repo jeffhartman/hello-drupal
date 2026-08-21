@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_entity
+id: hello_entity_save_action
+label: 'Save hello entities'
+type: hello_entity
+plugin: entity:save_action:hello_entity
+configuration: {  }

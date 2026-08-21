@@ -1,0 +1,10 @@
+entity.hello_entity.edit_form:
+  route_name: entity.hello_entity.edit_form
+  group: hello_entity
+  title: 'Edit'
+
+entity.hello_entity.delete_form:
+  route_name: entity.hello_entity.delete_form
+  group: hello_entity
+  title: 'Delete'
+  weight: 10

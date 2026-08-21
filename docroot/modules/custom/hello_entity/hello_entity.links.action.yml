@@ -1,0 +1,11 @@
+hello_entity.type_add:
+  title: 'Add Hello Entity type'
+  route_name: entity.hello_entity_type.add_form
+  appears_on:
+    - entity.hello_entity_type.collection
+
+hello_entity.add_page:
+  title: 'Add Hello Entity'
+  route_name: entity.hello_entity.add_page
+  appears_on:
+    - entity.hello_entity.collection

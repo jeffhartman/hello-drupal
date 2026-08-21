@@ -1,0 +1,5 @@
+name: 'Hello Entity'
+type: module
+description: '@todo Add description.'
+package: HELLO
+core_version_requirement: ^10 || ^11

@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_entity
+id: hello_entity_delete_action
+label: 'Delete hello entities'
+type: hello_entity
+plugin: entity:delete_action:hello_entity
+configuration: {  }

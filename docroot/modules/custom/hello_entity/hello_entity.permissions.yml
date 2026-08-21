@@ -1,0 +1,18 @@
+administer hello_entity types:
+  title: 'Administer Hello Entity types'
+  description: 'Maintain the types of Hello Entity entity.'
+  restrict access: true
+view hello_entity:
+  title: 'View Hello Entity'
+edit hello_entity:
+  title: 'Edit Hello Entity'
+delete hello_entity:
+  title: 'Delete Hello Entity'
+create hello_entity:
+  title: 'Create Hello Entity'
+view hello_entity revision:
+  title: 'View Hello Entity revision'
+revert hello_entity revision:
+  title: 'Revert Hello Entity revision'
+delete hello_entity revision:
+  title: 'Delete Hello Entity revision'
