@@ -1,0 +1,20 @@
+uuid: fa164bb7-728d-4c77-b53f-d045e4e41c5c
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_entity
+    - node
+id: hello_entity.field_ship
+field_name: field_ship
+entity_type: hello_entity
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

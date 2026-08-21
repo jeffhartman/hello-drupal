@@ -1,0 +1,20 @@
+uuid: 9fde8ec6-9454-4126-98a7-85c32ebfa32d
+langcode: en
+status: true
+dependencies:
+  module:
+    - color_field
+    - hello_entity
+id: hello_entity.field_legend_color
+field_name: field_legend_color
+entity_type: hello_entity
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

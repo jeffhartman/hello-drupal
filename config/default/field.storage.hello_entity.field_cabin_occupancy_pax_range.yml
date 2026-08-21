@@ -1,0 +1,19 @@
+uuid: a8f1ae5b-387d-4291-bded-7e42d9e5ec7e
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_entity
+    - range
+id: hello_entity.field_cabin_occupancy_pax_range
+field_name: field_cabin_occupancy_pax_range
+entity_type: hello_entity
+type: range_integer
+settings: {  }
+module: range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
