@@ -1,0 +1,17 @@
+uuid: d3b66b05-3302-4a6c-8dd9-4aa16adc0284
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_api
+    - serialization
+    - user
+id: expedition_detail
+plugin_id: expedition_detail
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
