@@ -1,0 +1,21 @@
+uuid: 32b67b8a-b2bb-46be-a5bd-56884d59eb0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_geolocation_coordinates
+    - taxonomy.vocabulary.ports
+  module:
+    - geolocation
+id: taxonomy_term.ports.field_geolocation_coordinates
+field_name: field_geolocation_coordinates
+entity_type: taxonomy_term
+bundle: ports
+label: 'Geolocation Coordinates'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

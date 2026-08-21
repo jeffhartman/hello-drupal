@@ -1,0 +1,19 @@
+uuid: e82f5c94-aa74-4aa7-8611-db3b87318d32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_port_code
+    - taxonomy.vocabulary.ports
+id: taxonomy_term.ports.field_port_code
+field_name: field_port_code
+entity_type: taxonomy_term
+bundle: ports
+label: 'Port Code'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,16 @@
+uuid: 7992b3ee-a0c7-456f-8d64-8ea7db92712b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.ports
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.ports
+target_entity_type_id: taxonomy_term
+target_bundle: ports
+default_langcode: site_default
+language_alterable: false

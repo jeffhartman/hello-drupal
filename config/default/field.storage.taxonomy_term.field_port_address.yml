@@ -1,0 +1,19 @@
+uuid: 126f7e9d-6461-4438-bff7-ac327b5ee8c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - taxonomy
+id: taxonomy_term.field_port_address
+field_name: field_port_address
+entity_type: taxonomy_term
+type: address
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

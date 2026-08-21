@@ -1,0 +1,14 @@
+uuid: c54bdb5b-52ad-4fed-8f6b-74cdb11eb664
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.ports
+id: taxonomy_vocabulary_ports
+entity_type_id: taxonomy_vocabulary
+entity_id: ports
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

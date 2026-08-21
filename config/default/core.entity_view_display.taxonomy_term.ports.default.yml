@@ -1,0 +1,51 @@
+uuid: 9cb5bbff-c47e-4d81-bce6-7ae1bf973258
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.ports.field_geolocation_coordinates
+    - field.field.taxonomy_term.ports.field_port_address
+    - field.field.taxonomy_term.ports.field_port_code
+    - taxonomy.vocabulary.ports
+  module:
+    - address
+    - geolocation
+    - text
+id: taxonomy_term.ports.default
+targetEntityType: taxonomy_term
+bundle: ports
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_geolocation_coordinates:
+    type: geolocation_latlng
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_port_address:
+    type: address_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_port_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true
