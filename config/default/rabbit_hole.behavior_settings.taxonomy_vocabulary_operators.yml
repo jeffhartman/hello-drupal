@@ -1,0 +1,14 @@
+uuid: 8f9e256f-37cf-4304-9a85-fee8abba8462
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.operators
+id: taxonomy_vocabulary_operators
+entity_type_id: taxonomy_vocabulary
+entity_id: operators
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied
