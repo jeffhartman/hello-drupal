@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.restricted_html
+    - rest.resource.expedition_detail
     - rest.resource.expedition_index
   module:
     - commerce_product
@@ -19,6 +20,7 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
+  - 'restful get expedition_detail'
   - 'restful get expedition_index'
   - 'use text format restricted_html'
   - 'view commerce_product'
