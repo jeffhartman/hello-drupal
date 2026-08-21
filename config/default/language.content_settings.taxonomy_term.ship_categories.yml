@@ -1,0 +1,16 @@
+uuid: f601705e-3af6-4335-8307-d485e3e4573a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.ship_categories
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.ship_categories
+target_entity_type_id: taxonomy_term
+target_bundle: ship_categories
+default_langcode: site_default
+language_alterable: false

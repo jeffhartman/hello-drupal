@@ -1,0 +1,14 @@
+uuid: 3dd0499a-d82a-486f-ab8a-62e9caab458f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.ship_categories
+id: taxonomy_vocabulary_ship_categories
+entity_type_id: taxonomy_vocabulary
+entity_id: ship_categories
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied
