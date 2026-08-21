@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+## Description: Run PHPUnit
+## Usage: phpunit ...args
+## Example: "ddev phpunit --testsuite unit"
+
+phpunit "$@"
