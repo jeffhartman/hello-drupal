@@ -1,0 +1,18 @@
+uuid: 6deee431-9fcf-4772-8dd4-a8089c152dd1
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hello_16x9_960x540
+label: hello_16x9_960x540
+effects:
+  f3b4f686-39cd-4f4e-acb4-376c2c145ad2:
+    uuid: f3b4f686-39cd-4f4e-acb4-376c2c145ad2
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 960
+      height: 540
+      crop_type: focal_point
+pipeline: hello_standard_quality

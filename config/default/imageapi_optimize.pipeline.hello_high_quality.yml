@@ -1,0 +1,24 @@
+uuid: 015d8bcb-580d-4803-b066-d04b1c8f71d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - imageapi_optimize_gd
+    - imageapi_optimize_webp
+name: hello_high_quality
+label: 'High Quality (Hero Images)'
+processors:
+  a98229e7-fba7-4ddb-8030-baa22f27ec03:
+    id: imageapi_optimize_gd
+    data:
+      quality: '75'
+      file_types:
+        image/jpeg: image/jpeg
+    weight: -9
+    uuid: a98229e7-fba7-4ddb-8030-baa22f27ec03
+  e0e80153-ce34-48ae-b259-25afcc002c68:
+    id: imageapi_optimize_webp
+    data:
+      quality: '80'
+    weight: -10
+    uuid: e0e80153-ce34-48ae-b259-25afcc002c68

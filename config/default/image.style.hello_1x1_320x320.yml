@@ -1,0 +1,18 @@
+uuid: 47f47197-0a37-467e-9a78-4b0001218e80
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hello_1x1_320x320
+label: hello_1x1_320x320
+effects:
+  ad394709-d589-4425-820c-c6ecf8fe9808:
+    uuid: ad394709-d589-4425-820c-c6ecf8fe9808
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 320
+      height: 320
+      crop_type: focal_point
+pipeline: hello_standard_quality

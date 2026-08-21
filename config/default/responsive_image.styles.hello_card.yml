@@ -1,0 +1,67 @@
+uuid: 02d16172-1171-4041-b4ce-691a0acd1e6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.hello_3x2_1200x800
+    - image.style.hello_3x2_320x213
+    - image.style.hello_3x2_480x320
+    - image.style.hello_3x2_600x400
+    - image.style.hello_3x2_960x640
+  theme:
+    - hello_base
+id: hello_card
+label: Card
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: hello_3x2_480x320
+    breakpoint_id: hello_base.2xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hello_3x2_960x640
+    breakpoint_id: hello_base.2xl
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: hello_3x2_480x320
+    breakpoint_id: hello_base.xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hello_3x2_960x640
+    breakpoint_id: hello_base.xl
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: hello_3x2_600x400
+    breakpoint_id: hello_base.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hello_3x2_1200x800
+    breakpoint_id: hello_base.lg
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: hello_3x2_480x320
+    breakpoint_id: hello_base.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hello_3x2_960x640
+    breakpoint_id: hello_base.md
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: hello_3x2_600x400
+    breakpoint_id: hello_base.sm
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hello_3x2_1200x800
+    breakpoint_id: hello_base.sm
+    multiplier: 2x
+breakpoint_group: hello_base
+fallback_image_style: hello_3x2_320x213

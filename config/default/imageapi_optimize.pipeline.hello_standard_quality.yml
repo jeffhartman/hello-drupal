@@ -1,0 +1,24 @@
+uuid: 621cfc8b-fb6d-4c8f-a902-668c82077fdf
+langcode: en
+status: true
+dependencies:
+  module:
+    - imageapi_optimize_gd
+    - imageapi_optimize_webp
+name: hello_standard_quality
+label: 'Standard Quality'
+processors:
+  f5c9cfec-2b25-4738-8941-48700af81c79:
+    id: imageapi_optimize_webp
+    data:
+      quality: '65'
+    weight: 1
+    uuid: f5c9cfec-2b25-4738-8941-48700af81c79
+  a3b8ac51-b0b2-45ea-aee1-0eb96ab482d1:
+    id: imageapi_optimize_gd
+    data:
+      quality: '65'
+      file_types:
+        image/jpeg: image/jpeg
+    weight: 2
+    uuid: a3b8ac51-b0b2-45ea-aee1-0eb96ab482d1

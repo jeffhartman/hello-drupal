@@ -1,0 +1,72 @@
+uuid: 3322a0b4-9831-4b60-9562-6a8376df9a5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.hello_16x9_1024x576
+    - image.style.hello_16x9_1920x1080
+    - image.style.hello_3x1_1280x427
+    - image.style.hello_3x1_1536x512
+    - image.style.hello_3x1_1920x640
+    - image.style.hello_3x1_2560x853
+    - image.style.hello_3x1_3840x1280
+    - image.style.hello_3x2_1536x1024
+    - image.style.hello_3x2_640x427
+    - image.style.hello_3x2_768x512
+  theme:
+    - hello_base
+id: hello_hero_banner
+label: 'Hero Banner'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: hello_3x1_1920x640
+    breakpoint_id: hello_base.2xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hello_3x1_3840x1280
+    breakpoint_id: hello_base.2xl
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: hello_3x1_1536x512
+    breakpoint_id: hello_base.xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hello_3x1_2560x853
+    breakpoint_id: hello_base.xl
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: hello_3x1_1280x427
+    breakpoint_id: hello_base.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hello_3x1_2560x853
+    breakpoint_id: hello_base.lg
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: hello_16x9_1024x576
+    breakpoint_id: hello_base.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hello_16x9_1920x1080
+    breakpoint_id: hello_base.md
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: hello_3x2_768x512
+    breakpoint_id: hello_base.sm
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hello_3x2_1536x1024
+    breakpoint_id: hello_base.sm
+    multiplier: 2x
+breakpoint_group: hello_base
+fallback_image_style: hello_3x2_640x427
