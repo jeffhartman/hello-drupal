@@ -1,0 +1,28 @@
+uuid: 584e3727-23bc-49c0-8d92-5b3ebc075a09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.field_body
+    - field.field.node.page.field_metatags
+    - node.type.page
+  module:
+    - text
+    - user
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_metatags: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
