@@ -1,0 +1,79 @@
+uuid: 6a948ef8-2404-4b54-b47c-562cf45f3f29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.hello_entity.ship_operator.field_season_range
+    - field.field.hello_entity.ship_operator.field_ship_operator
+    - hello_entity.hello_entity_type.ship_operator
+  module:
+    - datetime_range
+    - text
+id: hello_entity.ship_operator.default
+targetEntityType: hello_entity
+bundle: ship_operator
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  description:
+    type: text_textarea
+    weight: 10
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_season_range:
+    type: daterange_default
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ship_operator:
+    type: entity_reference_autocomplete
+    weight: 27
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  label:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: false
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 15
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

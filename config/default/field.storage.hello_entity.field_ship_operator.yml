@@ -1,0 +1,20 @@
+uuid: 10bb1f91-55a7-4014-89fd-15c744fff5b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_entity
+    - taxonomy
+id: hello_entity.field_ship_operator
+field_name: field_ship_operator
+entity_type: hello_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

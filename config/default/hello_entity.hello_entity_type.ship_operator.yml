@@ -1,0 +1,6 @@
+uuid: 18dff849-405e-4d3e-851e-b18f6af568ff
+langcode: en
+status: true
+dependencies: {  }
+id: ship_operator
+label: 'Ship Operator'

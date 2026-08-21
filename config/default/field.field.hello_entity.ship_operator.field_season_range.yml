@@ -1,0 +1,21 @@
+uuid: a19eaf5b-d00e-4d0d-b1c3-00742011100c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_season_range
+    - hello_entity.hello_entity_type.ship_operator
+  module:
+    - datetime_range
+id: hello_entity.ship_operator.field_season_range
+field_name: field_season_range
+entity_type: hello_entity
+bundle: ship_operator
+label: 'Season Range'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

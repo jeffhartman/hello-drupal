@@ -1,0 +1,29 @@
+uuid: 92af05b5-d479-487b-854b-12f6459e7559
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hello_entity.field_ship_operator
+    - hello_entity.hello_entity_type.ship_operator
+    - taxonomy.vocabulary.operators
+id: hello_entity.ship_operator.field_ship_operator
+field_name: field_ship_operator
+entity_type: hello_entity
+bundle: ship_operator
+label: 'Ship Operator'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      operators: operators
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

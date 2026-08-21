@@ -1,0 +1,20 @@
+uuid: 399cf99c-d082-4d48-8cf0-07321b01f8a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime_range
+    - hello_entity
+id: hello_entity.field_season_range
+field_name: field_season_range
+entity_type: hello_entity
+type: daterange
+settings:
+  datetime_type: date
+module: datetime_range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
