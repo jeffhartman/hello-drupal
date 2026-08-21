@@ -1,0 +1,19 @@
+uuid: 5ef564a5-01ec-4938-ae9e-490bda3ddc0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_language_code
+    - taxonomy.vocabulary.languages
+id: taxonomy_term.languages.field_language_code
+field_name: field_language_code
+entity_type: taxonomy_term
+bundle: languages
+label: 'Language Code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
