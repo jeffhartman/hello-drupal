@@ -74,6 +74,7 @@
     "require-dev": {
         "acquia/coding-standards": "^3.0",
         "dealerdirect/phpcodesniffer-composer-installer": "^1.2",
+        "drupal/core-dev": "^11.4",
         "mglaman/phpstan-drupal": "^2.1"
     },
     "conflict": {
@@ -92,7 +93,8 @@
             "php-http/discovery": true,
             "php-tuf/composer-integration": true,
             "phpstan/extension-installer": true,
-            "symfony/runtime": true
+            "symfony/runtime": true,
+            "tbachert/spi": true
         },
         "sort-packages": true
     },
