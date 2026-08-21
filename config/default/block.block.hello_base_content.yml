@@ -1,0 +1,22 @@
+uuid: e4ad4b8d-9dc8-4300-89ca-b28cb43c5111
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - hello_base
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: hello_base_content
+theme: hello_base
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }
