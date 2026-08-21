@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+## Description: Try to autofix linter issues.
+## Usage: lint-fix
+## Example: "ddev lint-fix"
+
+RED='\033[38;5;196m'
+GREEN='\033[38;5;40m'
+YELLOW='\033[38;5;226m'
+CYAN='\033[38;5;51m'
+NC="\033[0m"
+
+echo -e "${YELLOW}Running PHP Code Beautifier and Fixer (phpcbf)…${NC}";
+phpcbf
+exit 0

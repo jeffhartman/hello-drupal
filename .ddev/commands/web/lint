@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+## Description: Run PHPCodeSniffer linter.
+## Usage: lint
+## Example: "ddev lint"
+
+RED='\033[38;5;196m'
+GREEN='\033[38;5;40m'
+YELLOW='\033[38;5;226m'
+CYAN='\033[38;5;51m'
+NC="\033[0m"
+
+echo -e "${YELLOW}Running PHP CodeSniffer (phpcs) using Acquia Drupal Strict ruleset…${NC}";
+phpcs -p -s
+exit 0
