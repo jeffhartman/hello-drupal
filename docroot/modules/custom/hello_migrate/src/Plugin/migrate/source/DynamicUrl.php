@@ -31,7 +31,6 @@ use Drupal\migrate_plus\DataParserPluginManager;
  */
 final class DynamicUrl extends Url {
 
-
   /**
    * Constructs a DynamicUrl source plugin.
    */
