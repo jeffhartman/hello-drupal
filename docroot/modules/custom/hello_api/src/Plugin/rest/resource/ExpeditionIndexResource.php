@@ -87,7 +87,7 @@ final class ExpeditionIndexResource extends ResourceBase {
       ->accessCheck(TRUE)
       ->condition('type', 'expedition')
       ->sort('title')
-//      ->range(0, 3)
+    // ->range(0, 3)
       ->execute();
 
     $nodes = $storage->loadMultiple($node_ids);
