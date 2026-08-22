@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Contains hello_entity.module.
+ */
+
 declare(strict_types=1);
 
 /**
