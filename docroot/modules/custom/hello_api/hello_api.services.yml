@@ -3,7 +3,9 @@ services:
     class: Drupal\hello_api\Service\HeroBannerDataService
     arguments:
       - '@file_url_generator'
+      - '@entity_type.manager'
   hello_api.card_image_data:
     class: Drupal\hello_api\Service\CardImageDataService
     arguments:
       - '@file_url_generator'
+      - '@entity_type.manager'

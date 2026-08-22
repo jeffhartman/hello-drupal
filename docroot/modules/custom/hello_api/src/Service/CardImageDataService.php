@@ -3,9 +3,8 @@
 namespace Drupal\hello_api\Service;
 
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\File\FileUrlGeneratorInterface;
-use Drupal\image\Entity\ImageStyle;
-use Drupal\responsive_image\Entity\ResponsiveImageStyle;
 
 /**
  * Builds normalized card image data for API resources.
@@ -17,6 +16,7 @@ class CardImageDataService {
    */
   public function __construct(
     private readonly FileUrlGeneratorInterface $fileUrlGenerator,
+    private readonly EntityTypeManagerInterface $entityTypeManager,
   ) {}
 
   /**
@@ -53,11 +53,15 @@ class CardImageDataService {
         if ($file) {
           $image_url = $this->fileUrlGenerator->generateAbsoluteString($file->getFileUri());
 
-          $responsive_image_style = ResponsiveImageStyle::load('hello_card');
+          $responsive_image_style = $this->entityTypeManager
+            ->getStorage('responsive_image_style')
+            ->load('hello_card');
           if ($responsive_image_style) {
             $fallback_image_style_id = $responsive_image_style->getFallbackImageStyle();
             if ($fallback_image_style_id) {
-              $fallback_image_style = ImageStyle::load($fallback_image_style_id);
+              $fallback_image_style = $this->entityTypeManager
+                ->getStorage('image_style')
+                ->load($fallback_image_style_id);
               if ($fallback_image_style) {
                 $fallback_dimensions = [
                   'width' => $image_item?->width,
@@ -83,7 +87,9 @@ class CardImageDataService {
                 continue;
               }
 
-              $image_style = ImageStyle::load($image_style_id);
+              $image_style = $this->entityTypeManager
+                ->getStorage('image_style')
+                ->load($image_style_id);
               if (!$image_style) {
                 continue;
               }
